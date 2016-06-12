@@ -1,2 +1,3 @@
 # Proyecto
-Segundo Parcial de Software - Sistema de Gestión para Laboratorios Clínicos.
+Segundo Parcial de Software - Sistema de Gestión para Laboratorios Clínicos 
+2016
