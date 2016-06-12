@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="AnalisisLab" alias="AnalisisLab" created="2016-06-11T20:24:28" modified="2016-06-11T20:24:31" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys />
+  <columns>
+    <column fieldName="IDAnalisis" name="idAnalisis" label="id Analisis" />
+    <column fieldName="CampoAnalitico" name="CampoAnalitico" label="Campo Analitico" />
+    <column fieldName="Metodo" name="Metodo" label="Metodo" />
+    <column fieldName="MuestraExtraccion" name="Muestra_Extraccion" label="Muestra Extraccion" />
+    <column fieldName="Nombre" name="Nombre" label="Nombre" />
+    <column fieldName="ObservacionFija" name="observacionFija" label="observacion Fija" />
+    <column fieldName="ObservacionDinamica" name="observacionDinamica" label="observacion Dinamica" />
+    <column fieldName="Estado" name="Estado" label="Estado" />
+  </columns>
+</dataModel>

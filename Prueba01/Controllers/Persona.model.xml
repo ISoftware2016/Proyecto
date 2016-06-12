@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="Persona" alias="Persona" created="2016-06-11T20:24:59" modified="2016-06-11T20:25:01" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys />
+  <columns>
+    <column fieldName="Ci" name="Ci" label="Ci" />
+    <column fieldName="Pass" name="Pass" label="Pass" />
+    <column fieldName="Nombre" name="Nombre" label="Nombre" />
+    <column fieldName="Telefono" name="Telefono" label="Telefono" />
+    <column fieldName="Correo" name="Correo" label="Correo" />
+    <column fieldName="Sexo" name="Sexo" label="Sexo" />
+    <column fieldName="Fnacimiento" name="FNacimiento" label="F Nacimiento" />
+    <column fieldName="Direccion" name="Direccion" label="Direccion" />
+    <column fieldName="Estado" name="Estado" label="Estado" />
+  </columns>
+</dataModel>

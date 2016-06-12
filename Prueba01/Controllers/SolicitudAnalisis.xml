@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="SolicitudAnalisis" conflictDetection="overwriteChanges" label="Solicitud Analisis" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[
+select
+	"Solicitud_Analisis"."idSolicitudAnalisis" "IDSolicitudAnalisis"
+	,"Solicitud_Analisis"."idBioquimico" "IDBioquimico"
+	,"idBioquimico"."Pass" "IDBioquimicoPass"
+	,"Solicitud_Analisis"."idMedico" "IDMedico"
+	,"idMedico"."Nombre" "IDMedicoNombre"
+	,"Solicitud_Analisis"."idPaciente" "IDPaciente"
+	,"idPaciente"."Pass" "IDPacientePass"
+	,"Solicitud_Analisis"."idSeguro" "IDSeguro"
+	,"Solicitud_Analisis"."Fecha" "Fecha"
+	,"Solicitud_Analisis"."DatosClinicos" "DatosClinicos"
+	,"Solicitud_Analisis"."Estado" "Estado"
+	,"Solicitud_Analisis"."Completo" "Completo"
+	,"Solicitud_Analisis"."idEmpleado" "IDEmpleado"
+from "dbo"."Solicitud_Analisis" "Solicitud_Analisis"
+	left join "dbo"."Persona" "idBioquimico" on "Solicitud_Analisis"."idBioquimico" = "idBioquimico"."Ci"
+	left join "dbo"."Medico" "idMedico" on "Solicitud_Analisis"."idMedico" = "idMedico"."Id_Medico"
+	left join "dbo"."Persona" "idPaciente" on "Solicitud_Analisis"."idPaciente" = "idPaciente"."Ci"
+]]></text>
+    </command>
+    <command id="idSolicitudAnalisisIdentityCommand" type="Text" event="Inserted">
+      <text><![CDATA[select @@identity]]></text>
+      <output>
+        <fieldOutput fieldName="idSolicitudAnalisis" />
+      </output>
+    </command>
+  </commands>
+  <fields>
+    <field name="IDSolicitudAnalisis" type="Int32" allowNulls="false" isPrimaryKey="true" label="id Solicitud Analisis" readOnly="true" />
+    <field name="IDBioquimico" type="Int32" allowNulls="false" label="id Bioquimico" showInSummary="true">
+      <items style="Lookup" dataController="Persona" newDataView="createForm1" dataValueField="Ci" />
+    </field>
+    <field name="IDBioquimicoPass" type="String" readOnly="true" label="id Bioquimico Pass" length="300" />
+    <field name="IDMedico" type="Int32" allowNulls="false" label="id Medico" showInSummary="true">
+      <items style="Lookup" dataController="Medico" newDataView="createForm1" dataValueField="IDMedico" />
+    </field>
+    <field name="IDMedicoNombre" type="String" readOnly="true" label="id Medico Nombre" length="100" />
+    <field name="IDPaciente" type="Int32" allowNulls="false" label="id Paciente" showInSummary="true">
+      <items style="Lookup" dataController="Persona" newDataView="createForm1" dataValueField="Ci" />
+    </field>
+    <field name="IDPacientePass" type="String" readOnly="true" label="id Paciente Pass" length="300" />
+    <field name="IDSeguro" type="Int32" allowNulls="false" label="id Seguro" showInSummary="true" />
+    <field name="Fecha" type="String" label="Fecha" length="50" showInSummary="true" />
+    <field name="DatosClinicos" type="String" label="Datos Clinicos" length="255" />
+    <field name="Estado" type="Boolean" label="Estado" />
+    <field name="Completo" type="Int32" label="Completo" />
+    <field name="IDEmpleado" type="Int32" label="id Empleado" />
+  </fields>
+  <views>
+    <view id="grid1" type="Grid" commandId="command1" label="Solicitud Analisis">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="IDBioquimico" aliasFieldName="IDBioquimicoPass" />
+        <dataField fieldName="IDMedico" aliasFieldName="IDMedicoNombre" />
+        <dataField fieldName="IDPaciente" aliasFieldName="IDPacientePass" />
+        <dataField fieldName="IDSeguro" columns="15" />
+        <dataField fieldName="Fecha" columns="50" />
+        <dataField fieldName="DatosClinicos" />
+        <dataField fieldName="Estado" />
+        <dataField fieldName="Completo" columns="15" />
+        <dataField fieldName="IDEmpleado" columns="15" />
+      </dataFields>
+    </view>
+    <view id="editForm1" type="Form" commandId="command1" label="Review Solicitud Analisis">
+      <headerText>$DefaultEditViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="Solicitud Analisis" newColumn="true">
+          <description><![CDATA[$DefaultEditDescription]]></description>
+          <dataFields>
+            <dataField fieldName="IDBioquimico" aliasFieldName="IDBioquimicoPass" />
+            <dataField fieldName="IDMedico" aliasFieldName="IDMedicoNombre" />
+            <dataField fieldName="IDPaciente" aliasFieldName="IDPacientePass" />
+            <dataField fieldName="IDSeguro" columns="15" />
+            <dataField fieldName="Fecha" columns="50" />
+            <dataField fieldName="DatosClinicos" />
+            <dataField fieldName="Estado" />
+            <dataField fieldName="Completo" columns="15" />
+            <dataField fieldName="IDEmpleado" columns="15" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+    <view id="createForm1" type="Form" commandId="command1" label="New Solicitud Analisis">
+      <headerText>$DefaultCreateViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="New Solicitud Analisis" newColumn="true">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields>
+            <dataField fieldName="IDBioquimico" aliasFieldName="IDBioquimicoPass" />
+            <dataField fieldName="IDMedico" aliasFieldName="IDMedicoNombre" />
+            <dataField fieldName="IDPaciente" aliasFieldName="IDPacientePass" />
+            <dataField fieldName="IDSeguro" columns="15" />
+            <dataField fieldName="Fecha" columns="50" />
+            <dataField fieldName="DatosClinicos" />
+            <dataField fieldName="Estado" />
+            <dataField fieldName="Completo" columns="15" />
+            <dataField fieldName="IDEmpleado" columns="15" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag1" scope="Grid">
+      <action id="a1" commandName="Select" commandArgument="editForm1" />
+      <action id="a2" commandName="Edit" />
+      <action id="a3" commandName="Delete" />
+      <action id="a6" />
+      <action id="a7" commandName="New" commandArgument="grid1" />
+      <action id="a8" commandName="Duplicate" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
+      <action id="a3" commandName="Cancel" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Delete" />
+      <action id="a6" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenView="createForm1" commandName="Select" commandArgument="editForm1" whenKeySelected="true" whenClientScript="this.get_hasDetails()" />
+    </actionGroup>
+    <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
+      <action id="a1" commandName="New" commandArgument="createForm1" cssClass="NewIcon" />
+    </actionGroup>
+    <actionGroup id="ag4" scope="ActionBar" headerText="Edit/Delete" flat="true">
+      <action id="a1" whenKeySelected="true" commandName="Edit" commandArgument="editForm1" cssClass="EditIcon" whenView="grid1" />
+      <action id="a2" whenKeySelected="true" commandName="Delete" cssClass="DeleteIcon" whenView="grid1" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+    </actionGroup>
+    <actionGroup id="ag6" scope="ActionBar" headerText="Record">
+      <action id="a1" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a2" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a3" whenLastCommandName="New" commandName="Insert" />
+      <action id="a4" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag7" scope="ActionBar" headerText="Report">
+      <action id="a1" commandName="ReportAsPdf" />
+      <action id="a2" commandName="ReportAsImage" />
+      <action id="a3" commandName="ReportAsExcel" />
+      <action id="a4" commandName="ReportAsWord" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+  </actions>
+</dataController>

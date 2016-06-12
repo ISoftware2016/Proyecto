@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="DetalleAnalisis" alias="DetalleAnalisis" created="2016-06-11T20:24:52" modified="2016-06-11T20:24:54" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys>
+    <foreignKey id="TheidSolicitudAnalisis" parentTableSchema="dbo" parentTableName="Solicitud_Analisis" x="323" y="20">
+      <foreignKeyColumn columnName="idSolicitudAnalisis" parentColumnName="idSolicitudAnalisis" />
+    </foreignKey>
+    <foreignKey id="TheidSolicitudAnalisisidBioquimico" parentTableSchema="dbo" parentTableName="Persona" baseForeignKey="TheidSolicitudAnalisis" x="627" y="20">
+      <foreignKeyColumn columnName="idBioquimico" parentColumnName="Ci" />
+    </foreignKey>
+    <foreignKey id="TheidSolicitudAnalisisidMedico" parentTableSchema="dbo" parentTableName="Medico" baseForeignKey="TheidSolicitudAnalisis" x="627" y="197">
+      <foreignKeyColumn columnName="idMedico" parentColumnName="Id_Medico" />
+    </foreignKey>
+    <foreignKey id="TheidSolicitudAnalisisidPaciente" parentTableSchema="dbo" parentTableName="Persona" baseForeignKey="TheidSolicitudAnalisis" x="627" y="374">
+      <foreignKeyColumn columnName="idPaciente" parentColumnName="Ci" />
+    </foreignKey>
+    <foreignKey id="TheidAnalisis" parentTableSchema="dbo" parentTableName="AnalisisLab" x="323" y="250">
+      <foreignKeyColumn columnName="idAnalisis" parentColumnName="idAnalisis" />
+    </foreignKey>
+  </foreignKeys>
+  <columns>
+    <column fieldName="IDDetalle" name="Id_Detalle" label="Id Detalle" />
+    <column fieldName="IDSolicitudAnalisis" name="idSolicitudAnalisis" label="id Solicitud Analisis" aliasColumnName="Fecha" aliasForeignKey="TheidSolicitudAnalisis" />
+    <column fieldName="TheidSolicitudAnalisisFecha" name="Fecha" label="Theid Solicitud Analisis Fecha" foreignKey="TheidSolicitudAnalisis" />
+    <column fieldName="TheidSolicitudAnalisisidBioquimicoPass" name="Pass" label="Theid Solicitud Analisisid Bioquimico Pass" foreignKey="TheidSolicitudAnalisisidBioquimico" />
+    <column fieldName="TheidSolicitudAnalisisidMedicoNombre" name="Nombre" label="Theid Solicitud Analisisid Medico Nombre" foreignKey="TheidSolicitudAnalisisidMedico" />
+    <column fieldName="TheidSolicitudAnalisisidPacientePass" name="Pass" label="Theid Solicitud Analisisid Paciente Pass" foreignKey="TheidSolicitudAnalisisidPaciente" />
+    <column fieldName="IDAnalisis" name="idAnalisis" label="id Analisis" aliasColumnName="CampoAnalitico" aliasForeignKey="TheidAnalisis" />
+    <column fieldName="TheidAnalisisCampoAnalitico" name="CampoAnalitico" label="Theid Analisis Campo Analitico" foreignKey="TheidAnalisis" />
+    <column fieldName="Costo" name="Costo" label="Costo" format="c" />
+  </columns>
+</dataModel>

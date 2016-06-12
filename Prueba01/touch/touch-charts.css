@@ -1,0 +1,4177 @@
+﻿.app-chart-list {
+    /*margin:0.5em;*/
+}
+
+    .app-chart-list .app-promo-filler {
+        height: 89px;
+    }
+
+    .app-chart-list .ui-listview {
+        margin: 0;
+        margin-top: -1px;
+    }
+
+.app-chart {
+    float: left;
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+
+    .app-chart .app-chart-inner {
+        display: block;
+        border: solid 1px #ccc;
+        padding: 0;
+        padding-left: 3px;
+        background-color: #fff;
+        margin-top: -1px;
+        margin-left: -1px;
+    }
+
+    .app-chart.app-chart-has-data .app-chart-inner {
+        padding-left: 0;
+    }
+
+
+.app-theme-dark .app-chart .app-chart-inner,
+.app-theme-dark .app-chart-header,
+.app-theme-dark .app-chart .app-chart-headerbar,
+.app-theme-dark .app-echo .app-chart-list,
+.app-theme-dark .app-chart .app-chart-data {
+    color: #fff;
+    border-color: #333;
+    background-color: #1f1f1f;
+}
+
+    .app-theme-dark .app-chart .app-chart-data table th,
+    .app-theme-dark .app-chart .app-chart-data table td {
+        color: #ccc;
+        border-color: #333;
+    }
+
+@media (min-width: 40em) {
+    body.app-sidebar-undocked .app-chart {
+        width: 50%;
+    }
+
+        body.app-sidebar-undocked .app-chart.app-chart-medium,
+        body.app-sidebar-undocked .app-chart.app-chart-large {
+            width: 100%;
+        }
+}
+
+
+@media (min-width: 50em) {
+    body:not(.app-sidebar-undocked) .app-chart {
+        width: 50%;
+    }
+
+        body:not(.app-sidebar-undocked) .app-chart.app-chart-medium,
+        body:not(.app-sidebar-undocked) .app-chart.app-chart-large {
+            width: 100%;
+        }
+}
+
+@media (min-width: 64em) {
+    body.app-sidebar-undocked .app-chart {
+        width: 33.333%;
+    }
+
+        body.app-sidebar-undocked .app-chart.app-chart-medium {
+            width: 66.666%;
+        }
+
+        body.app-sidebar-undocked .app-chart.app-chart-large {
+            width: 100%;
+        }
+}
+
+
+@media (min-width: 76em) {
+    body:not(.app-sidebar-undocked) .app-chart {
+        width: 33.333%;
+    }
+
+        body:not(.app-sidebar-undocked) .app-chart.app-chart-medium {
+            width: 66.666%;
+        }
+
+        body:not(.app-sidebar-undocked) .app-chart.app-chart-large {
+            width: 100%;
+        }
+}
+
+.app-chart .ui-btn {
+    border-width: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    bottom: auto;
+    left: auto;
+    right: 1px;
+    width: 30px;
+    height: 30px;
+}
+
+    .app-chart .ui-btn:not(.ui-btn-active):not(:hover) {
+        background-color: transparent !important;
+    }
+
+.app-chart .app-btn-more {
+    width: 30px;
+    height: 30px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    cursor: pointer;
+}
+
+.app-chart .app-chart-mini {
+    height: 40px;
+    width: 60px;
+    margin-top: 12px;
+    margin-left: 12px;
+    float: left;
+    cursor: pointer;
+}
+
+.app-chart .app-chart-headerbar {
+    color: #000;
+    height: 52px;
+    padding-bottom: 0.25em;
+    width: 100%;
+    background-color: #fff;
+}
+
+.app-chart.app-chart-has-data .app-chart-header {
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    margin-left: 1em;
+    margin-right: 2.5em;
+    top: 1em;
+}
+
+.app-echo .app-echo-inner .app-chart-header {
+    white-space: normal;
+}
+
+.app-chart-medium.app-chart-has-data .app-chart-header {
+    font-size: 14px;
+}
+
+.app-chart-large.app-chart-has-data .app-chart-header {
+    font-size: 16px;
+}
+
+.app-chart .app-chart-data {
+    position: absolute;
+    overflow: auto;
+    height: 80%;
+    width: 100%;
+    background-color: #fff;
+}
+
+    .app-chart .app-chart-data table {
+        border-collapse: collapse;
+        padding: 1em;
+        padding-top: 0;
+        margin: 1em;
+        margin-top: 0;
+    }
+
+        .app-chart .app-chart-data table th,
+        .app-chart .app-chart-data table td {
+            color: #333;
+            border: solid 1px #ccc;
+            padding: 6px;
+            font-size: 14px;
+        }
+
+
+            .app-chart .app-chart-data table th,
+            .app-chart .app-chart-data table td:not(:first-child) {
+                text-align: center;
+            }
+
+.app-density-compact .app-chart .app-chart-data table th,
+.app-density-compact .app-chart .app-chart-data table td {
+    font-size: 12px;
+}
+
+/*.app-density-condensed .app-chart.app-chart-has-data .app-chart-header {
+    font-size: 12px;
+}*/
+.app-density-condensed .app-chart .app-chart-data table th,
+.app-density-condensed .app-chart .app-chart-data table td {
+    font-size: 10px;
+}
+/*.app-density-condensed .app-chart.app-chart-has-data .app-chart-header {
+    font-size: 12px;
+}*/
+
+.app-chart .app-chart-data table th:first-of-type {
+    white-space: nowrap;
+}
+
+.app-chart .app-chart-data table td {
+    padding: 3px;
+}
+
+/* Theming */
+.app-theme-aquarium .app-chart .app-chart-inner {
+    border-color: #C3DCFC;
+}
+
+.app-theme-azure .app-chart .app-chart-inner {
+    border-color: #b5c4c4;
+}
+
+.app-theme-belltown .app-chart .app-chart-inner {
+    border-color: #7bb2ac;
+}
+
+.app-theme-berry .app-chart .app-chart-inner {
+    border-color: #faa5c1;
+}
+
+.app-theme-bittersweet .app-chart .app-chart-inner {
+    border-color: #f3e1a7;
+}
+
+.app-theme-cay .app-chart .app-chart-inner {
+    border-color: #d2d2b4;
+}
+
+.app-theme-citrus .app-chart .app-chart-inner {
+    border-color: rgb(215, 232, 167);
+}
+
+.app-theme-classic .app-chart .app-chart-inner {
+    border-color: #b6cdf7;
+}
+
+.app-theme-construct .app-chart .app-chart-inner {
+    border-color: #d1d6b3;
+}
+
+.app-theme-convention .app-chart .app-chart-inner {
+    border-color: #eef095;
+}
+
+.app-theme-darkknight .app-chart .app-chart-inner {
+    border-color: #c6c6c6;
+}
+
+.app-theme-felt .app-chart .app-chart-inner {
+    border-color: #ffcd76;
+}
+
+.app-theme-graham .app-chart .app-chart-inner {
+    border-color: #fed49d;
+}
+
+.app-theme-granite .app-chart .app-chart-inner {
+    border-color: #bcaaa7;
+}
+
+.app-theme-grapello .app-chart .app-chart-inner {
+    border-color: #d2b1ee;
+}
+
+.app-theme-gravity .app-chart .app-chart-inner {
+    border-color: #d9d9d9;
+}
+
+.app-theme-lacquer .app-chart .app-chart-inner {
+    border-color: #707984;
+}
+
+.app-theme-laminate .app-chart .app-chart-inner {
+    border-color: #e3c7cd;
+}
+
+.app-theme-lichen .app-chart .app-chart-inner {
+    border-color: #c6c58f;
+}
+
+.app-theme-mission .app-chart .app-chart-inner {
+    border-color: #badb8f;
+}
+
+.app-theme-modernrose .app-chart .app-chart-inner {
+    border-color: #ffcce1;
+}
+
+.app-theme-municipal .app-chart .app-chart-inner {
+    border-color: #f4b29b;
+}
+
+.app-theme-pinnate .app-chart .app-chart-inner {
+    border-color: #d5e503;
+}
+
+.app-theme-plastic .app-chart .app-chart-inner {
+    border-color: #3c9aad;
+}
+
+.app-theme-ricasso .app-chart .app-chart-inner {
+    border-color: #bababa;
+}
+
+.app-theme-simple .app-chart .app-chart-inner {
+    border-color: #bfbfbf;
+}
+
+.app-theme-social .app-chart .app-chart-inner {
+    border-color: #d2d2d3;
+}
+
+.app-theme-summer .app-chart .app-chart-inner {
+    border-color: #c4d6cb;
+}
+
+.app-theme-vantage .app-chart .app-chart-inner {
+    border-color: #ffb219;
+}
+
+.app-theme-verdant .app-chart .app-chart-inner {
+    border-color: #8fbf28;
+}
+
+.app-theme-viewpoint .app-chart .app-chart-inner {
+    border-color: #acbf2d;
+}
+
+.app-theme-whitesmoke .app-chart .app-chart-inner {
+    border-color: #d9d9d9;
+}
+
+.app-theme-yoshi .app-chart .app-chart-inner {
+    border-color: #f2af79;
+}
+
+/*******************/
+/*Calendar Styling */
+/*******************/
+
+.app-presenter[data-presenter="calendar"] {
+    position: relative;
+}
+
+.app-calendar {
+    line-height: normal;
+    /*margin-bottom: -.5em;*/
+}
+
+.app-echo .app-calendar {
+    background-color: transparent !important;
+}
+
+/* Year Styling */
+.app-calendar-year-header {
+    width: 100%;
+}
+
+.app-calendar-year h1 {
+    border-bottom: 1px solid #ccc;
+    font-weight: 200;
+    font-size: 45px;
+    width: 5.33em;
+    margin: 0 auto 24px auto;
+    padding-right: 66.66%;
+    transition: color ease 0.3s;
+}
+
+body .app-presenter[data-presenter="calendar"] .app-calendar-yearview .app-calendar-year h1.app-in-header {
+    color: transparent !important;
+}
+
+.app-calendar-year:not(.data-loaded) h1 {
+    color: #ccc;
+}
+
+.app-theme-dark .app-calendar-year:not(.data-loaded) h1 {
+    color: #777;
+}
+
+.app-density-compact .app-calendar-year h1 {
+    width: 4.66em;
+}
+
+.app-density-condensed .app-calendar-year h1 {
+    width: 4em;
+}
+
+.app-theme-dark .app-calendar-year h1 {
+    border-color: #333;
+}
+
+.app-calendar-yearview .app-calendar-month {
+    display: block;
+    float: left;
+    box-sizing: border-box;
+    width: 33.33%;
+    padding: 0 0.5em 2em 0;
+}
+
+.app-calendar-yearview .app-calendar-month-header {
+    width: 10em;
+    border: none;
+    padding: 0 0 0 5px;
+    margin: 0 auto;
+    font-weight: 300;
+    font-size: 24px;
+    text-align: left;
+    overflow: hidden;
+}
+
+    .app-calendar-yearview .app-calendar-month-header:not(.ui-btn-active) {
+        background-color: transparent !important;
+        color: #38c;
+    }
+
+.app-density-compact .app-calendar-yearview .app-calendar-month-header {
+    width: 200px;
+}
+
+.app-density-condensed .app-calendar-yearview .app-calendar-month-header {
+    width: 170px;
+}
+
+@media (max-width: 32em) {
+    .app-calendar-yearview .app-calendar-month,
+    .app-calendar-yearview .app-calendar-month a {
+        font-size: 2.2vw !important;
+    }
+
+    .app-calendar-yearview .app-calendar-month-header {
+        width: 7.5em !important;
+        padding: 0;
+    }
+
+        .app-calendar-yearview .app-calendar-month-header:not(.ui-mini):not(.ui-btn-icon-notext) {
+            font-size: 4vw !important;
+        }
+
+    .app-calendar-year h1 {
+        font-size: 8vw;
+        width: 3.5em !important;
+    }
+
+    .app-calendar .app-calendar-yearview .app-calendar-month table {
+        width: 14em !important;
+    }
+}
+
+/* no sidebar*/
+@media (min-width:32em) and (max-width: 40em) {
+    .app-calendar-yearview .app-calendar-month,
+    .app-calendar-yearview .app-calendar-month a {
+        font-size: 1.8vw !important;
+    }
+
+    .app-calendar-yearview .app-calendar-month-header {
+        width: 10em !important;
+    }
+
+        .app-calendar-yearview .app-calendar-month-header:not(.ui-mini):not(.ui-btn-icon-notext) {
+            font-size: 2.7vw !important;
+        }
+
+    .app-calendar-year h1 {
+        font-size: 5.5vw;
+    }
+}
+
+@media (max-width: 62em) and (min-width: 40em) {
+
+    body:not(.app-sidebar-undocked) .app-calendar-yearview .app-calendar-month {
+        font-size: 1.4vw !important;
+    }
+
+    body:not(.app-sidebar-undocked) .app-calendar-yearview .app-calendar-month-header {
+        font-size: 2.5vw !important;
+        width: 8em !important;
+    }
+
+    body:not(.app-sidebar-undocked) .app-calendar-year h1 {
+        font-size: 5vw;
+        width: 4.5em;
+    }
+
+    body:not(.app-sidebar-undocked).app-density-compact .app-calendar .app-calendar-year h1 {
+        font-size: 5vw;
+        width: 4em;
+    }
+
+    body:not(.app-sidebar-undocked).app-density-condensed .app-calendar .app-calendar-year h1 {
+        font-size: 5vw;
+        width: 3.66em;
+    }
+}
+
+@media (min-width: 64em) {
+    .app-sidebar-undocked .app-calendar .app-calendar-yearview .app-calendar-month {
+        width: 25%;
+    }
+
+    .app-sidebar-undocked .app-calendar-year h1 {
+        padding-right: 75%;
+    }
+}
+
+@media (min-width: 77em) {
+    body:not(app-sidebar-undocked) .app-calendar .app-calendar-yearview .app-calendar-month {
+        width: 25%;
+    }
+
+    body:not(app-sidebar-undocked) .app-calendar-year h1 {
+        padding-right: 75%;
+    }
+}
+
+@media (min-width: 95em) {
+    .app-sidebar-undocked .app-calendar .app-calendar-yearview .app-calendar-month {
+        width: 16.66%;
+    }
+
+    .app-sidebar-undocked .app-calendar-year h1 {
+        padding-right: 84%;
+    }
+}
+
+@media (min-width: 107em) {
+    body:not(app-sidebar-undocked) .app-calendar .app-calendar-yearview .app-calendar-month {
+        width: 16.66%;
+    }
+
+    body:not(app-sidebar-undocked) .app-calendar-year h1 {
+        padding-right: 84%;
+    }
+}
+
+@media (max-width: 32em) and (max-resolution: 128dpi) {
+
+    .app-calendar-yearview .app-calendar-month {
+        width: 50%;
+    }
+
+        .app-calendar-yearview .app-calendar-month,
+        .app-calendar-yearview .app-calendar-month a {
+            font-size: 2.5vw !important;
+        }
+
+    .app-calendar-yearview .app-calendar-month-header {
+        width: 8.5em !important;
+    }
+
+        .app-calendar-yearview .app-calendar-month-header:not(.ui-mini):not(.ui-btn-icon-notext) {
+            font-size: 4vw !important;
+        }
+
+    .app-calendar-year h1 {
+        font-size: 6vw !important;
+        width: 6em !important;
+        padding-right: 50%;
+    }
+}
+
+.app-calendar .app-calendar-yearview .app-calendar-month table {
+    box-sizing: content-box;
+    width: 15em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.app-calendar-yearview .app-calendar-month th {
+    font-weight: normal;
+}
+
+.app-calendar-yearview .app-calendar-month td {
+    min-height: 1px;
+    text-align: center;
+    vertical-align: middle;
+    width: 1.5em;
+    height: 2em;
+    padding: 0;
+    cursor: pointer;
+}
+
+    .app-calendar-yearview .app-calendar-month td.app-has-data:not(.app-current-day):not(.ui-btn-active) {
+        background-color: #e9e9e9;
+        transition: background-color ease 0.3s;
+    }
+
+.app-theme-dark .app-calendar-yearview .app-calendar-month td.app-has-data:not(.app-current-day):not(.ui-btn-active) {
+    background-color: #333;
+}
+
+.app-calendar-yearview .app-calendar-month td.ui-btn-active {
+    background-color: #38c;
+    border-radius: 0;
+    color: #fff;
+}
+
+.app-day-header .app-current-day {
+    font-weight: bold;
+}
+
+.app-day-header .ui-btn:not(.ui-btn-active) .app-current-day {
+    color: #38c;
+}
+
+.app-calendar-plugin span.app-current-day,
+.app-calendar-monthview .app-current-day,
+.app-calendar-yearview .app-current-day,
+.app-week-header .app-current-day,
+.app-day-header .app-current-day.visible-day {
+    background-color: #38c;
+    border-radius: 50%;
+    color: #fff !important;
+    font-weight: bold;
+}
+
+.app-calendar-plugin span.app-current-day {
+    display: inline-block;
+    width: 1.7em;
+}
+
+.app-calendar-plugin td:not(.app-has-data) span.app-current-day {
+    font-weight: normal;
+}
+
+
+.visible-day {
+    background-color: #000;
+    border-radius: 50%;
+    color: #fff !important;
+    font-weight: bold;
+}
+
+.app-week-header li > a > div,
+.app-day-header li > a > div {
+    display: inline;
+    margin-left: -2px;
+    height: 1.5em;
+    line-height: 1.5em;
+    vertical-align: middle;
+    width: 1.5em;
+    display: inline-block;
+}
+
+.app-calendar-monthview .app-calendar-month {
+    height: 100%;
+}
+
+.app-calendar-monthview .app-calendar-month-header {
+    margin: 0.25em 0.5em;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.app-calendar .app-calendar-month-header {
+    font-size: 24px;
+    color: #38c;
+    transition: color ease 0.2s;
+}
+
+.app-theme-dark .app-calendar .app-calendar-month-header {
+    color: #fff;
+}
+
+.app-calendar-agenda-list .app-calendar-month-header h1 {
+    font-size: 24px;
+    padding: 4px;
+}
+
+.app-density-compact .app-wrapper .app-calendar .app-calendar-month-header,
+.app-density-compact .app-wrapper .app-calendar-agenda-list .app-calendar-month-header h1 {
+    font-size: 22px;
+}
+
+.app-density-condensed .app-wrapper .app-calendar .app-calendar-month-header,
+.app-density-condensed .app-wrapper .app-calendar-agenda-list .app-calendar-month-header h1 {
+    font-size: 20px;
+}
+
+.app-calendar-monthview .app-calendar-month:not(.data-loaded) .app-calendar-month-header {
+    color: #ccc;
+}
+
+.app-theme-dark .app-calendar-monthview .app-calendar-month:not(.data-loaded) .app-calendar-month-header {
+    color: #555;
+}
+
+.app-calendar-monthview .app-calendar-month-header.app-in-header {
+    color: transparent !important;
+}
+
+.app-calendar-monthview .app-calendar-month table {
+    width: 100%;
+    border-spacing: 0;
+    background-color: #fff;
+    table-layout: fixed;
+}
+
+.app-theme-dark .app-calendar-monthview .app-calendar-month table {
+    background-color: #333;
+}
+
+.app-calendar-monthview .app-calendar-month table tr {
+    /*height: 16vmin;*/
+}
+
+.app-calendar-monthview .app-calendar-month table td {
+    border: solid 1px #e5e5e5;
+    border-top-width: 0;
+    border-left-width: 0;
+    position: relative;
+    width: 14.2%;
+    /*overflow: hidden;*/
+    vertical-align: top;
+}
+
+    .app-calendar-monthview .app-calendar-month table td ul {
+        margin: 0;
+        padding: .5em 0 0 0;
+        list-style: none;
+        font-size: 8.5px;
+    }
+
+.app-calendar-dayview .app-event {
+    font-size: 10px;
+}
+
+.app-calendar-weekview .app-event {
+    font-size: 8.5px;
+}
+
+.app-event .app-event-time-long {
+    font-weight: normal;
+}
+
+.app-event .app-event-handle {
+    position: absolute;
+    height: 5px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition: opacity ease 0.2s;
+    opacity: 0;
+    cursor: row-resize;
+}
+
+.app-event:hover .app-event-handle,
+.app-event-preview .app-event-handle {
+    transition: opacity ease 0.2s;
+    opacity: 1;
+}
+
+.app-event .app-event-handle::after {
+    content: ' ';
+    display: block;
+    width: 20px;
+    height: 5px;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: -2px auto 0;
+}
+
+
+@media (min-width: 640px) {
+    .app-calendar-monthview .app-calendar-month table td ul {
+        font-size: 12px;
+    }
+
+
+    .app-calendar-dayview .app-event {
+        font-size: 12px;
+    }
+
+    .app-calendar-weekview .app-event {
+        font-size: 12px;
+    }
+
+    .app-event .app-event-time {
+        font-size: .85em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .app-calendar-monthview .app-calendar-month table td ul,
+    .app-calendar-weekview .app-event {
+        font-size: 12px;
+    }
+}
+
+.app-calendar-monthview .app-calendar-month table li {
+    margin: 2px;
+    border-radius: 2px;
+    white-space: nowrap;
+}
+
+/*.app-calendar-month table ul:not(.app-show-time) li:not(.app-calendar-month-more) span {
+    display: none;
+}*/
+
+@media (max-width: 768px) {
+    .app-calendar-month table ul li.app-calendar-month-more span {
+        display: none;
+    }
+}
+
+.app-calendar-monthview .app-calendar-month table td li.app-calendar-month-more:not(.ui-btn-active) {
+    color: #a2a2a2;
+}
+
+.app-theme-dark .app-calendar-monthview .app-calendar-month table td li.app-calendar-month-more:not(.ui-btn-active) {
+    color: #999;
+}
+
+.app-theme-dark .app-calendar-monthview .app-calendar-month table td {
+    border-color: #111;
+}
+
+.app-calendar-monthview .app-calendar-month table td.app-calendar-weekend {
+    background-color: #fcfcfc;
+}
+
+.app-theme-dark .app-calendar-monthview .app-calendar-month table td.app-calendar-weekend  {
+    background-color: #222;
+}
+
+/*.app-theme-dark .app-calendar-monthview .app-calendar-month table tr:not(:last-of-type) td:first-of-type,
+.app-theme-dark .app-calendar-monthview .app-calendar-month table tr:not(:last-of-type) td:last-of-type {
+    border-bottom-color: #333;
+}*/
+
+.app-calendar-monthview .app-calendar-month table td.app-calendar-weekend > a:not(.ui-btn-active) {
+    color: #a2a2a2;
+}
+
+.app-calendar-monthview .app-calendar-month table td > a {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 4px 4px 0 4px !important;
+    margin: 0;
+    font-weight: normal;
+    line-height: 1;
+    border-color: transparent !important;
+}
+
+    .app-calendar-monthview .app-calendar-month table td > a.ui-btn-active {
+        padding-bottom: 4px !important;
+    }
+
+.app-calendar-yearview .app-calendar-month table td > a {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+    line-height: 1;
+    border-width: 0 !important;
+}
+
+    .app-calendar-yearview .app-calendar-month table td > a:not(.ui-btn-active),
+    .app-calendar-monthview .app-calendar-month table td > a:not(.ui-btn-active) {
+        background-color: transparent !important;
+    }
+
+    .app-calendar-yearview .app-calendar-month table td > a > span {
+        display: inline-block;
+        width: 1.5em;
+        height: 1.5em;
+        line-height: 1.5em;
+    }
+
+.app-calendar-monthview .app-calendar-month table td > a > span {
+    display: inline-block;
+    width: 1.5em;
+    text-align: center;
+    vertical-align: middle;
+    height: 1.5em;
+    line-height: 1.5em;
+}
+
+.app-calendar-monthview .app-calendar-month table {
+    border-top: solid 1px #e5e5e5;
+}
+
+.app-theme-dark .app-calendar-monthview .app-calendar-month table {
+    border-top-color: #111;
+}
+
+.app-calendar-weekview,
+.app-calendar-dayview {
+    height: 1060px;
+    overflow: hidden;
+}
+
+.app-calendar-time {
+    background-color: #fff;
+    left: 0;
+    width: 60px;
+    font-size: 12px;
+    padding-right: 0.5em;
+    height: 100%;
+    position: relative;
+    z-index: 2000;
+    margin-top: -2px;
+}
+
+.app-theme-light .app-calendar-time,
+.app-theme-modern .app-calendar-time {
+    background-color: #f9f9f9;
+}
+
+.app-theme-dark .app-calendar-time {
+    background-color: #1f1f1f;
+    border-color: #1f1f1f;
+}
+
+.app-calendar-weekview .app-calendar-time {
+    position: absolute;
+}
+
+.app-calendar-dayview .app-calendar-time {
+    float: left;
+}
+
+.app-calendar-time ul {
+    list-style: none;
+    padding-left: 0;
+    height: 100%;
+    margin-top: 16px;
+}
+
+    .app-calendar-time ul li {
+        display: block;
+        height: 4%;
+    }
+
+        .app-calendar-time ul li span {
+            padding-left: 1em;
+            float: right;
+        }
+
+
+.app-calendar-time .app-current-time {
+    position: absolute;
+    top: 0;
+    margin-top: 16px;
+    left: 0;
+    width: 60px;
+    text-align: right;
+    color: transparent;
+}
+
+.app-has-current-day .app-current-time {
+    color: #38c;
+}
+
+.app-has-time-prompt .app-current-time {
+    color: #000;
+}
+
+.app-theme-dark .app-has-time-prompt .app-current-time {
+    color: #fff;
+}
+
+.app-has-current-day .app-calendar-time li .time-hidden,
+.app-has-time-prompt .app-calendar-time li .time-hidden {
+    color: transparent;
+}
+
+.app-calendar-week-grid {
+    padding-left: 66px;
+    height: 100%;
+}
+
+.app-calendar-day-grid {
+    min-width: 30000px;
+    height: 100%;
+    overflow: hidden;
+}
+
+    .app-calendar-day,
+    .app-calendar-day-grid .app-calendar-load-at-top {
+        display: inline-block;
+        float: left;
+        height: 100%;
+    }
+
+    .app-calendar-day-grid .app-calendar-load-at-top {
+        /*position:relative;*/
+    }
+
+    .app-calendar-day-grid .dv-load-at-top {
+        position: fixed;
+        top: 50%;
+    }
+
+.current-time-line {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    margin-top: 22px;
+    margin-bottom: -23px;
+    right: 0;
+}
+
+.app-has-current-day .current-time-line,
+.app-calendar-agenda-list .current-time-line {
+    border-top: solid 1px #38c;
+}
+
+.app-calendar-agendaview .current-time-line {
+    right: 12px;
+}
+
+.app-time-line-container {
+    display: block;
+    vertical-align: middle;
+    height: 3em;
+    line-height: 2em;
+    padding-top: 1em;
+}
+
+.app-density-condensed .app-time-line-container {
+    padding-top: 1.6em;
+}
+
+.app-density-compact .app-time-line-container {
+    padding-top: 1.3em;
+}
+
+
+.app-calendar-agenda-list li.app-time-line-container > .app-event-time {
+    color: #38c;
+    padding: 0;
+    margin: 0;
+    position: static;
+    display: inline-block;
+    vertical-align: baseline;
+    line-height: 2em;
+}
+
+.app-calendar-agenda-list li.app-time-line-container > .app-time-line-container:first-child {
+    margin-top: 1em;
+    height: 2em;
+}
+
+.app-calendar-agenda-list .app-event {
+    font-weight: bold;
+}
+
+    .app-calendar-agenda-list .app-event .app-event-time {
+        font-weight: normal;
+    }
+
+
+.app-calendar-agenda-list .current-time-line {
+    border-radius: 0 !important;
+    top: 2em;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    height: 1px;
+    margin-top: 0 !important;
+}
+
+.app-density-condensed .app-calendar-agenda-list .app-has-current-day .current-time-line {
+    top: 2.5em;
+}
+
+.app-density-compact .app-calendar-agenda-list .app-has-current-day .current-time-line {
+    top: 2.1em;
+}
+
+.app-calendar-weekview .app-calendar-time .current-time-line {
+    margin-top: 24px !important;
+}
+
+
+.app-has-time-prompt .current-time-line {
+    border-top: solid 1px #000;
+}
+
+.app-theme-dark .app-has-time-prompt .current-time-line {
+    border-top: solid 1px #fff;
+}
+
+
+.app-calendar-weekview .current-time-line {
+    position: absolute;
+    width: 100%;
+}
+
+.current-time-line div.dot {
+    position: absolute;
+    content: "";
+    margin-left: 70px;
+    margin-top: -0.25em;
+    border-radius: 0.5em;
+    height: 0.5em;
+    width: 0.5em !important;
+}
+
+.app-has-current-day .current-time-line div.dot {
+    background-color: #38c;
+}
+
+.app-has-time-prompt .current-time-line div.dot {
+    background-color: #000;
+}
+
+.app-theme-dark .app-has-time-prompt .current-time-line div.dot {
+    background-color: #fff;
+}
+
+.app-calendar-day {
+    position: relative;
+}
+
+    .app-calendar-day > div:not(.app-clear-fix):not(.app-calendar-time) {
+        height: 4%;
+        overflow-x: visible;
+        white-space: nowrap;
+        /*margin-left: -0.5em;*/
+    }
+
+.app-calendar-weekview .app-calendar-day > div:nth-of-type(1),
+.app-calendar-dayview .app-calendar-day > div:nth-of-type(2) {
+    height: 22px;
+    margin-top: -1px;
+}
+
+.app-calendar-day > div:not(.app-calendar-time) {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: -1px;
+}
+
+
+.app-calendar-week-grid .app-calendar-day > div {
+    border-right: solid 1px #ccc;
+    padding-right: 1px;
+}
+
+/*.app-calendar-day > div > div {
+    height: 100%;
+    display: inline-block;
+    padding-right: 2px;
+    width: 100%;
+}*/
+
+.app-theme-dark .app-calendar-day > div {
+    border-color: #333;
+}
+
+.app-calendar-week-grid .app-calendar-day.endofweek > div {
+    border-right-width: 2px;
+    padding-right: 0;
+}
+
+.app-calendar-day > div:last-of-type > div {
+    border-bottom-width: 0;
+}
+
+.app-calendar-day ul.app-calendar-eventlist {
+    padding: 0;
+    margin: 0;
+}
+
+ul.app-calendar-eventlist li {
+    box-sizing: border-box;
+    position: absolute;
+    list-style: none;
+    padding: 0.5em;
+    border-radius: 2px;
+    top: 22px;
+    left: 0;
+    width: 90%;
+}
+
+.app-calendar-dayview ul.app-calendar-eventlist li.app-event {
+    left: 70px;
+}
+
+.app-calendar-weekview ul.app-calendar-eventlist li.app-event {
+    left: 4px;
+}
+
+.app-calendar-dayview ul.app-calendar-eventlist li.app-event,
+.app-calendar-weekview ul.app-calendar-eventlist li.app-event {
+    box-shadow: 0 0 3px #fff;
+}
+
+.app-theme-dark .app-calendar-dayview ul.app-calendar-eventlist li.app-event,
+.app-theme-dark .app-calendar-weekview ul.app-calendar-eventlist li.app-event {
+    box-shadow: 0 0 3px #000;
+}
+
+.app-calendar-dayview ul.app-calendar-eventlist li.app-event.app-calendar-selected {
+    outline-offset: -3px;
+}
+
+.app-calendar-load-at-top,
+.app-calendar-load-at-bottom {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+    .app-calendar-load-at-top a,
+    .app-calendar-load-at-bottom a {
+        margin-left: auto;
+        margin-right: auto;
+        background-color: transparent !important;
+        border-width: 0;
+        font-weight: normal;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+.app-bar-header .app-bar-calendar {
+    padding-top: .3em;
+    /*padding-bottom: .5em;*/
+    overflow: hidden;
+}
+
+    .app-bar-header .app-bar-calendar .app-tabs {
+        display: inline-block;
+        padding: 0;
+        width: 58%;
+        min-width: 58%;
+        margin-left: 21%;
+        margin-right: 21%;
+    }
+
+@media (max-width: 574px) {
+    body.app-sidebar-undocked .app-bar-header .app-bar-calendar .app-tabs {
+        visibility: hidden;
+    }
+}
+
+
+@media (max-width: 767px) {
+    body:not(.app-sidebar-undocked) .app-bar-header .app-bar-calendar .app-tabs {
+        visibility: hidden;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .app-bar-header .app-bar-calendar .app-tabs {
+        margin-left: 15%;
+        margin-right: 15%;
+        min-width: 70%;
+        width: 70%;
+    }
+}
+
+.app-calendar-badge {
+    cursor: default;
+    display: inline-block;
+    left: 11px;
+    position: absolute;
+    font-weight: normal;
+    font-size: 18px !important;
+    margin-top: 12px;
+    top: 0;
+    border-width: 0 !important;
+    padding: 3px 1.2em 3px 3px !important;
+    box-shadow: none !important;
+}
+
+    .app-calendar-badge:not(.ui-btn-active):not(.app-selected) {
+        background-color: transparent !important;
+    }
+
+    .app-calendar-badge.app-has-droparrow {
+        cursor: pointer;
+    }
+
+    .app-calendar-badge b {
+        font-weight: 600;
+    }
+
+.app-density-compact .app-calendar-badge {
+    margin-top: 12px;
+}
+
+.app-density-condensed .app-calendar-badge {
+    margin-top: 9px;
+}
+
+.app-calendar-today,
+.app-calendar-next,
+.app-calendar-prev {
+    position: absolute;
+    right: 98px;
+    top: .4em;
+    margin: 5px 0;
+}
+
+.app-calendar-next {
+    right: 0.56em;
+}
+
+.app-calendar-prev {
+    right: 53px;
+}
+
+.app-density-compact .app-calendar-today,
+.app-density-compact .app-calendar-next,
+.app-density-compact .app-calendar-prev {
+    margin-top: 4px;
+}
+
+
+
+.app-density-condensed .app-calendar-today,
+.app-density-condensed .app-calendar-next,
+.app-density-condensed .app-calendar-prev {
+    margin-top: 3px;
+}
+
+.app-bar-calendar .app-month-header,
+.app-bar-calendar .app-week-header,
+.app-bar-calendar .app-day-header {
+    clear: right;
+    margin-top: -1em;
+}
+
+    .app-bar-calendar .app-month-header ul,
+    .app-bar-calendar .app-week-header ul,
+    .app-bar-calendar .app-day-header ul {
+        padding-left: 0;
+        margin-top: 0.25em;
+    }
+
+    .app-bar-calendar .app-week-header ul,
+    .app-bar-calendar .app-day-header ul {
+        white-space: nowrap;
+        width: 30000px;
+    }
+
+
+.app-theme-dark .app-bar-calendar .app-week-header ul,
+.app-theme-dark .app-bar-calendar .app-day-header ul {
+    border-color: #333;
+}
+
+.app-desktop .app-bar-calendar .app-month-header ul {
+    margin-right: 16px;
+}
+
+
+.app-bar-calendar .app-month-header li,
+.app-bar-calendar .app-week-header li,
+.app-bar-calendar .app-day-header li {
+    list-style: none;
+    font-weight: normal;
+    float: left;
+}
+
+.app-bar-calendar .app-month-header li {
+    text-align: right;
+    width: 14.28%;
+    padding-bottom: .2em;
+}
+
+.app-bar-calendar .app-week-header li,
+.app-bar-calendar .app-day-header li {
+    display: inline;
+    text-align: center;
+    width: 200px;
+    padding: 0 2px 0.2em 0;
+    border-right: none;
+}
+
+    .app-bar-calendar .app-week-header li a,
+    .app-bar-calendar .app-day-header li a {
+        border: none;
+        padding: 0;
+        margin: 0;
+        font-weight: normal;
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+    }
+
+@media (min-width: 30em) {
+    .app-bar-calendar .app-week-header li a,
+    .app-bar-calendar .app-day-header li a {
+        font-size: 1em !important;
+    }
+}
+
+body.app-theme-light:not(.app-desktop) .app-week-header li a.ui-btn:hover:not(.ui-btn-active),
+body.app-theme-light:not(.app-desktop) .app-day-header li a.ui-btn:hover:not(.ui-btn-active),
+.app-bar-calendar .app-week-header li a:not(.ui-btn-active),
+.app-bar-calendar .app-day-header li a:not(.ui-btn-active) {
+    background-color: transparent !important;
+}
+
+.app-bar-calendar .app-week-header ul {
+    padding-left: 65px;
+}
+
+.app-sidebar-undocked .app-bar-calendar .app-week-header ul {
+    padding-left: 66px;
+}
+
+.app-bar-calendar .app-week-header li.last-day-of-week {
+    padding-right: 0;
+    border-right: 2px solid #ccc;
+}
+
+.app-theme-dark .app-bar-calendar .app-week-header li.last-day-of-week {
+    border-color: #333;
+}
+
+.app-week-header li.first-day-of-week a:not(.ui-btn-active),
+.app-week-header li.last-day-of-week a:not(.ui-btn-active),
+.app-day-header li.first-day-of-week a:not(.ui-btn-active),
+.app-day-header li.last-day-of-week a:not(.ui-btn-active) {
+    color: #777;
+}
+
+.app-week-header .ui-btn .letter-day,
+.app-day-header .ui-btn .letter-day,
+.app-month-header .letter-day {
+    display: inline;
+}
+
+@media (max-width: 30em) {
+    .app-bar-calendar .ui-btn .letter-day,
+    .app-bar-calendar .ui-btn .abbr-day,
+    .app-bar-calendar .ui-btn .full-day {
+        font-size: 3vw !important;
+        display: block;
+    }
+
+    .app-bar-calendar .ui-btn div {
+        font-size: 4.4vw !important;
+    }
+}
+
+@media (min-width: 30em) and (max-width: 45em) {
+    .app-bar-calendar .ui-btn .letter-day,
+    .app-bar-calendar .ui-btn .abbr-day,
+    .app-bar-calendar .ui-btn .full-day {
+        display: block;
+        font-size: 0.9em !important;
+    }
+
+    .app-bar-calendar li .ui-btn {
+        padding-bottom: 0.2em !important;
+    }
+
+        .app-bar-calendar li .ui-btn div {
+            font-size: 1.2em !important;
+        }
+}
+
+.app-week-header .ui-btn span,
+.app-day-header .ui-btn span {
+    vertical-align: middle;
+}
+
+
+.app-week-header .ui-btn .abbr-day,
+.app-day-header .ui-btn .abbr-day,
+.app-month-header .abbr-day {
+    display: none;
+}
+
+.app-week-header .ui-btn .full-day,
+.app-day-header .ui-btn .full-day,
+.app-month-header .full-day {
+    display: none;
+}
+
+.app-week-header .ui-btn div,
+.app-day-header .ui-btn div {
+    display: inline-block;
+}
+
+@media(min-width: 30em) {
+
+    .app-month-header .letter-day {
+        display: none;
+    }
+
+    .app-month-header .abbr-day {
+        display: inline;
+    }
+}
+
+@media (min-width: 45em) {
+    .app-week-header .ui-btn .letter-day,
+    .app-day-header .ui-btn .letter-day,
+    .app-month-header .letter-day {
+        display: none;
+    }
+
+    .app-week-header .ui-btn .abbr-day,
+    .app-day-header .ui-btn .abbr-day,
+    .app-month-header .abbr-day {
+        display: inline;
+    }
+}
+
+@media (min-width: 1680px) {
+    .app-week-header .ui-btn .abbr-day,
+    .app-day-header .ui-btn .abbr-day,
+    .app-month-header .abbr-day {
+        display: none;
+    }
+
+    .app-week-header .ui-btn .full-day,
+    .app-day-header .ui-btn .full-day,
+    .app-month-header .full-day {
+        display: inline;
+    }
+}
+
+.app-bar-calendar .app-month-header li span {
+    margin-right: 0.5em;
+}
+
+.app-bar-calendar .app-month-header li.app-calendar-weekend {
+    color: #a2a2a2;
+}
+
+.app-bar-footer .app-bar-calendar-footer {
+    padding: 0 1em;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.app-calendar-weekview .app-calendar-week-grid > div:not(.app-calendar-time) > div,
+.app-bar-calendar .app-week-header li,
+.app-bar-calendar .app-day-header li {
+    width: 300px;
+}
+
+
+.app-bar-calendar-footer .app-scroll-outer {
+    overflow-x: auto;
+    -ms-overflow-style: scrollbar;
+    margin-left: -1em;
+    margin-right: -1em;
+}
+
+.app-bar-calendar-footer .app-scroll-inner {
+    height: 1px;
+}
+
+/* Agenda styling*/
+.app-calendar-agenda-list {
+    list-style: none;
+    margin-left: 0;
+    padding: 0;
+    width: 100% !important;
+}
+
+    .app-calendar-agenda-list > li {
+        clear: both;
+        padding-bottom: 1em;
+    }
+
+        .app-calendar-agenda-list > li:last-of-type {
+            border-bottom-width: 0;
+        }
+
+        .app-calendar-agenda-list > li.app-has-current-day h2:not(.ui-btn-active) > span {
+            color: #38c;
+        }
+
+        .app-calendar-agenda-list > li.app-has-current-day .current-time-line {
+            width: auto;
+            margin-bottom: 0;
+            margin-right: 0;
+            padding: 1em 0;
+        }
+
+    .app-calendar-agenda-list .current-time-line .dot {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: 0;
+    }
+
+    .app-calendar-agenda-list h2 {
+        position: absolute;
+        font-size: 18px !important;
+        font-weight: 600;
+        vertical-align: top;
+        padding: 12px !important;
+        margin: 11px 0 0;
+        box-sizing: border-box;
+        z-index: 1;
+        border: none;
+    }
+
+.app-echo .app-calendar-agenda-list h2 {
+    cursor: default;
+}
+
+.app-echo .dv-action-see-all {
+    line-height: normal;
+}
+
+.app-density-compact .app-calendar-agenda-list h2 {
+    margin-top: 10px;
+}
+
+.app-density-condensed .app-calendar-agenda-list h2 {
+    margin-top: 9px;
+}
+
+.app-calendar-agenda-list h2:not(.ui-btn-active) {
+    background-color: transparent !important;
+}
+
+.app-calendar-agenda-list .app-calendar-month-header {
+    font-size: 1em !important;
+    margin-left: 17em;
+    border: none;
+    padding: 0;
+    margin-top: 2em;
+    text-align: left;
+}
+
+    .app-calendar-agenda-list .app-calendar-month-header:not(.ui-btn-active) {
+        background-color: transparent !important;
+        color: #38c;
+    }
+
+    .app-calendar-agenda-list .app-calendar-month-header h1 {
+        text-transform: uppercase;
+        font-weight: 300;
+        margin: 0;
+    }
+
+.app-echo .app-calendar-agenda-list .app-calendar-month-header {
+    margin-top: 0;
+}
+
+.app-theme-dark .app-calendar-agenda-list li {
+    border-top-width: 0 !important;
+}
+
+.app-theme-dark .app-calendar-agenda-list .app-calendar-month-header h1 {
+    color: #fff;
+}
+
+.app-calendar-agenda-list h2 .app-calendar-daynumbig {
+    display: none;
+}
+
+.app-calendar-agenda-list .app-calendar-day {
+    padding-left: 11em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+    .app-calendar-agenda-list .app-calendar-day ul {
+        list-style: none;
+        padding: 0;
+        width: 100% !important;
+        min-height: 3em;
+    }
+
+    .app-calendar-agenda-list .app-calendar-day li {
+        position: relative;
+    }
+
+        .app-calendar-agenda-list .app-calendar-day li > div {
+            margin: 12px;
+            margin-left: 6em;
+            padding: 12px;
+            border-radius: 2px;
+            white-space: normal !important;
+        }
+
+.app-calendar .app-event:not(.app-event-has-end-time) {
+    white-space: nowrap;
+}
+
+
+.app-calendar-dayview .app-event:not(.app-event-has-end-time) .app-event-time-long,
+.app-calendar-weekview .app-event:not(.app-event-has-end-time) .app-event-time-long,
+.app-calendar-dayview .app-event.app-event-has-end-time .app-event-time,
+.app-calendar-weekview .app-event.app-event-has-end-time .app-event-time {
+    display: none;
+}
+
+.app-calendar .app-event.app-event-preview,
+.app-calendar .app-event.app-event-new {
+    opacity: 0.8;
+    z-index: 1000 !important;
+}
+
+.app-calendar-agenda-list li > .app-event-time {
+    margin-top: 12px;
+    position: absolute;
+    vertical-align: middle;
+}
+
+.app-calendar-agenda-list .app-calendar-day li > div .app-event-time {
+    display: none;
+}
+
+@media (min-width: 1000px) {
+
+    .app-calendar-agenda-list {
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 800px !important;
+    }
+}
+
+.app-calendar-has-end-time .app-calendar-agenda-list .app-calendar-day li > div {
+    margin-left: 10em;
+}
+
+.app-calendar-has-end-time .app-calendar-agenda-list .app-calendar-month-header {
+    margin-left: 21em;
+}
+
+@media(max-width: 30em) {
+
+    .app-calendar-agenda-list .app-calendar-day {
+        padding-left: 5em;
+    }
+
+    .app-calendar-agenda-list li > .app-event-time {
+        display: none;
+    }
+
+    .app-calendar-agenda-list .app-calendar-day li > div .app-event-time {
+        display: block;
+    }
+
+    .app-calendar-agenda-list li.app-time-line-container > .app-event-time {
+        display: block;
+        padding-top: 1em;
+    }
+
+    .app-calendar-agenda-list .app-calendar-day li.app-time-line-container {
+        height: 40px;
+    }
+
+    .app-calendar-agenda-list .app-calendar-day li > div {
+        margin-left: 0 !important;
+    }
+
+    .app-calendar-agenda-list .app-calendar-month-header {
+        margin-left: 5em !important;
+    }
+
+    .app-calendar-agenda-list h2 .app-calendar-monthname,
+    .app-calendar-agenda-list h2 .app-calendar-daynum {
+        display: none;
+    }
+
+    .app-calendar-agenda-list h2 .app-calendar-daynumbig {
+        display: block;
+        margin-bottom: -0.5em;
+    }
+
+    .app-calendar-agenda-list h2 .app-calendar-dayname {
+        font-size: 0.75em;
+    }
+}
+
+@media (min-width: 30.01em) {
+
+    .app-density-compact .app-calendar-agenda-list h2,
+    .app-density-condensed .app-calendar-agenda-list h2 {
+        font-size: 16px !important;
+    }
+}
+
+.app-blink {
+    background-color: #38c !important;
+    color: #fff !important;
+}
+
+
+.app-calendar .app-calendar-time,
+.app-calendar .app-event,
+.app-calendar .app-calendar-month-more {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.app-calendar .app-event,
+.app-calendar .app-calendar-month-more {
+    cursor: pointer;
+    overflow: hidden;
+    color: #000;
+    /*text-overflow: ellipsis;*/
+    padding: .25em;
+    font-weight: bold;
+}
+
+    .app-calendar .app-event .app-event-time {
+        font-weight: normal;
+        text-transform: lowercase;
+        margin-right: -1px;
+    }
+
+
+.app-calendar-dayview .app-event,
+.app-calendar-weekview .app-event {
+    /*margin-top: 22px;*/
+    /*margin-left: 3px;*/
+    padding: .5em;
+}
+
+.app-selected.ui-btn .app-event,
+.app-calendar-selected {
+    outline: 3px solid #000;
+    border-radius: 0 !important;
+    z-index: 1000 !important;
+}
+
+
+.app-event.ui-btn-active,
+.app-calendar-month-more.ui-btn-active {
+    background-color: #38c;
+    color: #fff;
+}
+
+.app-theme-dark .app-selected.ui-btn .app-event,
+.app-theme-dark .app-calendar-selected {
+    outline-color: #fff;
+    /*outline-style: dotted;*/
+}
+
+.app-event {
+    opacity: 1;
+    transition: opacity ease 0.5s;
+}
+
+.app-event-filter .app-event {
+    opacity: 0.2;
+    transition: opacity ease 0.5s;
+}
+
+.app-event-more {
+    font-size: 0.8em !important;
+    text-overflow: clip !important;
+}
+
+.app-event-more,
+.app-event-new {
+    background-color: #e9e9e9;
+}
+
+.app-theme-dark .app-event-more,
+.app-theme-dark .app-event-new {
+    background-color: #333;
+    color: #fff !important;
+}
+
+.app-event-more.app-selected {
+    z-index: 1000 !important;
+}
+
+@media(max-width:45em) {
+    .app-calendar-weekview .app-event-more {
+        color: transparent;
+    }
+
+    .app-calendar-weekview .app-event .app-event-time,
+    .app-calendar-weekview .app-event .app-event-time-long,
+    .app-calendar-monthview .app-event .app-event-time {
+        display: none;
+    }
+}
+
+@media (max-width: 30em) {
+    .app-calendar-dayview .app-event-more .dots {
+        display: inline;
+    }
+
+    .app-calendar-dayview .app-event-more span:not(.dots) {
+        display: none;
+    }
+}
+
+.app-event-color-0 {
+    background-color: #4986e7;
+}
+
+.app-event-filter-color-0 .app-event-color-0 {
+    opacity: 1;
+}
+
+.app-event-color-1 {
+    background-color: #f83a22;
+}
+
+.app-event-filter-color-1 .app-event-color-1 {
+    opacity: 1;
+}
+
+.app-event-color-2 {
+    background-color: #16a765;
+}
+
+.app-event-filter-color-2 .app-event-color-2 {
+    opacity: 1;
+}
+
+.app-event-color-3 {
+    background-color: #a47ae2;
+}
+
+.app-event-filter-color-3 .app-event-color-3 {
+    opacity: 1;
+}
+
+.app-event-color-4 {
+    background-color: #ffad46;
+}
+
+.app-event-filter-color-4 .app-event-color-4 {
+    opacity: 1;
+}
+
+.app-event-color-5 {
+    background-color: #9fc6e7;
+}
+
+.app-event-filter-color-5 .app-event-color-5 {
+    opacity: 1;
+}
+
+.app-event-color-6 {
+    background-color: #ac725e;
+}
+
+.app-event-filter-color-6 .app-event-color-6 {
+    opacity: 1;
+}
+
+.app-event-color-7 {
+    background-color: #42d692;
+}
+
+.app-event-filter-color-7 .app-event-color-7 {
+    opacity: 1;
+}
+
+.app-event-color-8 {
+    background-color: #cd74e6;
+}
+
+.app-event-filter-color-8 .app-event-color-8 {
+    opacity: 1;
+}
+
+.app-event-color-9 {
+    background-color: #ff7537;
+}
+
+.app-event-filter-color-9 .app-event-color-9 {
+    opacity: 1;
+}
+
+.app-event-color-10 {
+    background-color: #9fe1e7;
+}
+
+.app-event-filter-color-10 .app-event-color-10 {
+    opacity: 1;
+}
+
+.app-event-color-11 {
+    background-color: #f691b2;
+}
+
+.app-event-filter-color-11 .app-event-color-11 {
+    opacity: 1;
+}
+
+.app-event-color-12 {
+    background-color: #7bd148;
+}
+
+.app-event-filter-color-12 .app-event-color-12 {
+    opacity: 1;
+}
+
+.app-event-color-13 {
+    background-color: #9a9cff;
+}
+
+.app-event-filter-color-13 .app-event-color-13 {
+    opacity: 1;
+}
+
+.app-event-color-14 {
+    background-color: #c2c2c2;
+}
+
+.app-event-filter-color-14 .app-event-color-14 {
+    opacity: 1;
+}
+
+.app-event-color-15 {
+    background-color: #92e1c0;
+}
+
+.app-event-filter-color-15 .app-event-color-15 {
+    opacity: 1;
+}
+
+.app-event-color-16 {
+    background-color: #d06b64;
+}
+
+.app-event-filter-color-16 .app-event-color-16 {
+    opacity: 1;
+}
+
+.app-event-color-17 {
+    background-color: #b3dc6c;
+}
+
+.app-event-filter-color-17 .app-event-color-17 {
+    opacity: 1;
+}
+
+.app-event-color-18 {
+    background-color: #b99aff;
+}
+
+.app-event-filter-color-18 .app-event-color-18 {
+    opacity: 1;
+}
+
+.app-event-color-19 {
+    background-color: #fbe983;
+}
+
+.app-event-filter-color-19 .app-event-color-19 {
+    opacity: 1;
+}
+
+.app-event-color-20 {
+    background-color: #cca6ac;
+}
+
+.app-event-filter-color-20 .app-event-color-20 {
+    opacity: 1;
+}
+
+.app-event-color-21 {
+    background-color: #fa573c;
+}
+
+.app-event-filter-color-21 .app-event-color-21 {
+    opacity: 1;
+}
+
+.app-event-color-22 {
+    background-color: #cabdbf;
+}
+
+.app-event-filter-color-22 .app-event-color-22 {
+    opacity: 1;
+}
+
+.app-event-color-23 {
+    background-color: #fad165;
+}
+
+.app-event-filter-color-23 .app-event-color-23 {
+    opacity: 1;
+}
+
+
+/* Calendar Sidebar Plugin */
+
+.app-calendar-plugin {
+    margin: -1em -1em 1em -1em;
+    padding: 0.5em 0;
+    border-bottom: solid 1px #ddd;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.app-theme-dark .app-calendar-plugin {
+    border-color: #111;
+}
+
+.app-calendar-plugin h1 {
+    margin: 0;
+    font-size: 1em;
+}
+
+.app-calendar-plugin table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .app-calendar-plugin table th {
+        font-weight: normal;
+        text-transform: none;
+        font-size: 14px;
+    }
+
+    .app-calendar-plugin table td {
+        width: 14.2%;
+        height: 1.7em;
+        line-height: 1.7em;
+        cursor: pointer;
+        text-align: center;
+    }
+
+        .app-calendar-plugin table td.app-has-data {
+            font-weight: bold;
+        }
+
+    .app-calendar-plugin table tr:not(.app-week-hidden) td.app-day-hidden {
+        font-size: 0 !important;
+    }
+
+    .app-calendar-plugin table tr.app-week-hidden td {
+        visibility: hidden;
+    }
+
+    .app-calendar-plugin table tr:not(.ui-btn-active) td.app-prev-month,
+    .app-calendar-plugin table tr:not(.ui-btn-active) td.app-next-month {
+        color: #808080;
+    }
+
+.app-theme-dark .app-calendar-plugin table td:not(.app-has-data) {
+    color: #bbb;
+}
+
+.app-theme-dark .app-calendar-plugin table tr:not(.ui-btn-active) td.app-prev-month,
+.app-theme-dark .app-calendar-plugin table tr:not(.ui-btn-active) td.app-next-month {
+    color: #777;
+}
+
+.app-calendar-plugin table tr.app-selected,
+.app-calendar-plugin table td.app-selected {
+    background-color: #cfe9f3 !important;
+}
+
+.app-calendar-plugin table tr.ui-btn-active,
+.app-calendar-plugin table tr.ui-btn-active td,
+.app-calendar-plugin table tr.ui-btn-active td:hover,
+.app-calendar-plugin table td.ui-btn-active,
+.app-calendar-plugin table td.ui-btn-active:hover {
+    background-color: #38c !important;
+}
+
+    .app-calendar-plugin table tr.ui-btn-active td,
+    .app-calendar-plugin table td.ui-btn-active {
+        color: #fff !important;
+    }
+
+.app-theme-dark .app-calendar-plugin table tr.app-selected,
+.app-theme-dark .app-calendar-plugin table tr:not(.ui-btn-active) td.app-selected:not(.ui-btn-active) {
+    background-color: #1f1f1f !important;
+}
+
+.app-density-condensed .app-calendar-plugin table th,
+.app-density-condensed .app-calendar-plugin table td,
+.app-density-condensed .app-calendar-plugin ol li {
+    font-size: 12px;
+}
+
+.app-calendar-plugin .ui-btn.ui-btn-icon-notext {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 0.25em;
+    font-size: 1em;
+    border-top-width: 1px !important;
+}
+
+    .app-calendar-plugin .ui-btn.ui-btn-icon-notext.app-calendar-plugin-loadright {
+        left: auto;
+        right: 0.25em;
+    }
+
+.app-calendar-plugin .app-calendar-plugin-header {
+    margin-bottom: 2px;
+}
+
+.app-density-condensed .app-calendar-plugin .app-calendar-plugin-header {
+    margin-top: 4px;
+}
+
+.app-calendar-plugin .app-calendar-plugin-header div .app-has-droparrow {
+    display: inline-block;
+    position: relative;
+    margin-top: 0.5em;
+}
+
+.app-calendar-plugin .app-calendar-plugin-header div {
+    text-align: center;
+    height: 28px;
+    line-height: 28px;
+    white-space: nowrap;
+    margin-left: 30px;
+    margin-right: 30px;
+    cursor: pointer;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.app-calendar-plugin .app-month-container {
+    padding: 0 0.5em;
+}
+
+    .app-calendar-plugin .app-month-container > div {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+
+.app-density-condensed .app-calendar-plugin-header div a,
+.app-density-condensed .app-calendar-plugin .app-month-container > div,
+.app-density-condensed .app-calendar-color-legend {
+    font-size: 12px;
+}
+
+.app-density-compact .app-calendar-plugin-header div a,
+.app-density-compact .app-calendar-plugin .app-month-container > div,
+.app-calendar-color-legend {
+    font-size: 14px !important;
+}
+
+.app-theme-dark .app-calendar-plugin-header div {
+    color: #bbb !important;
+}
+
+.app-calendar-plugin .ui-btn:not(.ui-btn-icon-notext) {
+    margin: 0;
+    padding: 0 10px 0 0 !important;
+    border-width: 0 !important;
+}
+
+.app-calendar-plugin .ui-btn.app-calendar-plugin-fieldselector:not(.ui-btn-icon-notext) {
+    display: table;
+    margin: 0.25em auto 0 auto;
+    border-width: 0 !important;
+    padding: 3px 1.5em 3px 1em !important;
+}
+
+.app-calendar-plugin .ui-btn:not(.ui-btn-icon-notext):not(.ui-btn-active):not(.app-selected) {
+    background-color: transparent !important;
+}
+
+.app-calendar-plugin .app-calendar-plugin-fieldselector.app-selected,
+.app-calendar-plugin .app-calendar-plugin-fieldselector.app-selected:hover,
+.app-calendar-plugin .app-calendar-plugin-header .app-selected,
+.app-calendar-plugin .app-calendar-plugin-header .app-selected:hover,
+.app-calendar .app-bar-calendar .app-calendar-badge.app-selected,
+.app-calendar .app-bar-calendar .app-calendar-badge.app-selected:hover {
+    background-color: rgba(0,0,0, 0.05) !important;
+    color: #000 !important;
+}
+
+.app-theme-dark .app-calendar-plugin .app-calendar-plugin-fieldselector.app-selected,
+.app-theme-dark .app-calendar-plugin .app-calendar-plugin-fieldselector.ui-btn.app-selected:hover:not(.ui-btn-active),
+.app-theme-dark .app-calendar-plugin .app-calendar-plugin-header .app-selected,
+.app-theme-dark .app-calendar-plugin .app-calendar-plugin-header .app-selected:hover,
+.app-theme-dark .app-calendar .app-bar-calendar .app-calendar-badge.app-selected,
+.app-theme-dark .app-calendar .app-bar-calendar .app-calendar-badge.app-selected:hover {
+    background-color: #222 !important;
+    color: #fff !important;
+}
+
+.app-calendar-plugin .app-calendar-color-legend a.app-hidden {
+    display: none !important;
+}
+
+.app-calendar-plugin-header .app-has-droparrow:after {
+    right: 0;
+}
+
+.app-calendar-plugin .app-calendar-color-legend {
+    border-top: 1px solid #ddd;
+    padding-left: 1em;
+    margin-top: 0.5em;
+}
+
+    .app-calendar-plugin .app-calendar-color-legend.app-hidden {
+        display: none !important;
+    }
+
+.app-theme-dark .app-calendar-plugin .app-calendar-color-legend {
+    border-color: #111;
+}
+
+.app-calendar-plugin .app-calendar-color-legend ol {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    margin-top: 0.25em;
+}
+
+.app-labelsinlist-displayedabove .app-calendar-plugin .app-calendar-color-legend ol {
+    margin-top: 0.25em;
+}
+
+.app-calendar-plugin .app-calendar-color-legend li {
+    position: relative;
+    padding-left: 1.5em;
+    cursor: pointer;
+}
+
+.app-calendar-plugin .app-calendar-color-legend:not(.app-see-all) li.app-hidden {
+    display: none;
+}
+/*.app-calendar-plugin .app-calendar-color-legend .app-item-desc {
+    margin-left: 21px!important;
+}
+.app-calendar-condensed .app-calendar-plugin .app-calendar-color-legend .app-item-desc {
+    margin-left: 18px!important;
+}*/
+
+.app-calendar-plugin .app-calendar-color-legend .app-item-desc-before {
+    margin-top: 0.5em !important;
+}
+
+.app-calendar-plugin .app-calendar-color-legend .app-legend-toggle {
+    margin-left: 1.5em;
+    padding-right: 1.5em !important;
+    text-align: left;
+    width: auto;
+    display: inline-block;
+}
+
+.app-calendar-plugin .app-calendar-color-legend.app-see-all .app-legend-toggle:after {
+    transform: rotate(180deg);
+}
+
+.app-calendar-plugin .app-calendar-color-legend.app-see-all a.app-legend-toggle span.app-see-more {
+    display: none;
+}
+
+.app-calendar-plugin .app-calendar-color-legend:not(.app-see-all) a.app-legend-toggle span.app-see-less {
+    display: none;
+}
+
+.app-calendar-plugin .app-calendar-color-legend li span {
+    position: absolute;
+    display: block;
+    top: 50%;
+    margin-top: -0.5em;
+    left: 0;
+    width: 1em;
+    height: 1em;
+}
+
+.app-calendar-plugin .app-calendar-color-legend .app-item-desc {
+    font-size: 0.75em;
+}
+
+.app-density-condensed .app-calendar-plugin .app-calendar-color-legend .app-item-desc {
+    font-size: 11px;
+}
+
+.app-density-condensed .app-calendar-plugin .app-calendar-color-legend .app-item-desc {
+    font-size: 10px;
+}
+
+/* Theming for Calendar */
+
+.app-theme-dark .app-calendar-today,
+.app-theme-dark .app-calendar-next,
+.app-theme-dark .app-calendar-prev,
+.app-theme-dark .app-calendar-plugin-loadright,
+.app-theme-dark .app-calendar-plugin-loadleft {
+    border-color: #1f1f1f !important;
+}
+
+.app-theme-aquarium .app-calendar-plugin {
+    background-color: #fff;
+}
+
+.app-theme-aquarium .app-calendar-month-header {
+    color: #3d7fd5 !important;
+}
+
+.app-theme-aquarium .app-calendar-monthview .app-calendar-month table td.app-calendar-weekend  {
+    background-color: #F2F8FF;
+}
+
+.app-theme-aquarium .app-calendar-plugin,
+.app-theme-aquarium .app-calendar-color-legend,
+.app-theme-aquarium .app-calendar-monthview .app-calendar-month table,
+.app-theme-aquarium .app-calendar-monthview .app-calendar-month table td,
+.app-theme-aquarium .app-calendar-day > div > div,
+.app-theme-aquarium .app-bar-calendar .app-week-header li.last-day-of-week,
+.app-theme-aquarium .app-calendar-week-grid .app-calendar-day > div {
+    border-color: #c3dcfc;
+}
+
+    .app-theme-aquarium .app-calendar-plugin span.app-current-day,
+    .app-theme-aquarium .app-calendar-monthview .app-current-day,
+    .app-theme-aquarium .app-calendar-yearview .app-current-day,
+    .app-theme-aquarium .app-week-header .app-current-day,
+    .app-theme-aquarium .app-day-header .visible-day.app-current-day,
+    .app-theme-aquarium .app-has-current-day .current-time-line .dot {
+        background-color: #6f9dd9;
+    }
+
+
+.app-theme-aquarium .app-has-current-day .current-time-line {
+    border-color: #6f9dd9;
+}
+
+.app-theme-aquarium .app-day-header :not(.ui-btn-active).ui-btn .app-current-day,
+.app-theme-aquarium .app-has-current-day .app-current-time,
+.app-theme-aquarium .app-calendar-agenda-list > li.app-has-current-day h2:not(.ui-btn-active) > span,
+.app-theme-aquarium .app-calendar-agenda-list li.app-time-line-container > .app-event-time {
+    color: #6f9dd9;
+}
+
+.app-theme-aquarium .app-calendar-plugin table tr.ui-btn-active td,
+.app-theme-aquarium .app-calendar-plugin table td.ui-btn-active,
+.app-theme-aquarium .app-calendar-yearview .app-calendar-month td.ui-btn-active,
+.app-theme-aquarium .ui-header .app-bar-calendar .ui-btn-active.ui-btn.app-calendar-today {
+    background-color: #FFD253 !important;
+    color: #000 !important;
+}
+
+.app-theme-aquarium .app-calendar-yearview .app-calendar-month td:not(.app-current-day):not(.ui-btn-active).app-has-data {
+    background-color: #E0F2FA;
+}
+
+
+.app-theme-azure .app-calendar-plugin {
+    background-color: #fff;
+    color: #000;
+}
+
+.app-theme-azure .app-calendar-month-header {
+    color: #1f1f1f !important;
+}
+
+.app-theme-azure .app-calendar-monthview .app-calendar-month table td.app-calendar-weekend  {
+    background-color: #f2f2f2;
+}
+
+.app-theme-azure .app-calendar-plugin,
+.app-theme-azure .app-calendar-color-legend,
+.app-theme-azure .app-calendar-monthview .app-calendar-month table,
+.app-theme-azure .app-calendar-monthview .app-calendar-month table td,
+.app-theme-azure .app-calendar-day > div > div,
+.app-theme-azure .app-bar-calendar .app-week-header li.last-day-of-week,
+.app-theme-azure .app-calendar-week-grid .app-calendar-day > div {
+    border-color: #b5c4c4;
+}
+
+    .app-theme-azure .app-calendar-plugin span.app-current-day,
+    .app-theme-azure .app-calendar-monthview .app-current-day,
+    .app-theme-azure .app-calendar-yearview .app-current-day,
+    .app-theme-azure .app-week-header .app-current-day,
+    .app-theme-azure .app-day-header .visible-day.app-current-day,
+    .app-theme-azure .app-has-current-day .current-time-line .dot {
+        background-color: #0c334b;
+    }
+
+.app-theme-azure .app-has-current-day .current-time-line {
+    border-color: #0c334b;
+}
+
+.app-theme-azure .app-day-header :not(.ui-btn-active).ui-btn .app-current-day,
+.app-theme-azure .app-has-current-day .app-current-time,
+.app-theme-azure .app-calendar-agenda-list > li.app-has-current-day h2:not(.ui-btn-active) > span,
+.app-theme-azure .app-calendar-agenda-list li.app-time-line-container > .app-event-time {
+    color: #0c334b;
+}
+
+.app-theme-azure .app-calendar-plugin table tr.ui-btn-active td,
+.app-theme-azure .app-calendar-plugin table td.ui-btn-active,
+.app-theme-azure .app-calendar-yearview .app-calendar-month td.ui-btn-active,
+.app-theme-azure .ui-header .app-bar-calendar .ui-btn-active.ui-btn.app-calendar-today {
+    background-color: #0c334b !important;
+}
+
+.app-theme-azure .app-calendar-yearview .app-calendar-month td:not(.app-current-day):not(.ui-btn-active).app-has-data {
+    background-color: #daede9;
+}
+
+.app-theme-belltown .app-calendar-plugin {
+    background-color: #fff;
+    color: #000;
+}
+
+.app-theme-belltown .app-calendar-month-header {
+    color: #1f1f1f !important;
+}
+
+.app-theme-belltown .app-calendar-monthview .app-calendar-month table td.app-calendar-weekend  {
+    background-color: #f2f2f2;
+}
+
+.app-theme-belltown .app-calendar-plugin,
+.app-theme-belltown .app-calendar-color-legend,
+.app-theme-belltown .app-calendar-monthview .app-calendar-month table,
+.app-theme-belltown .app-calendar-monthview .app-calendar-month table td,
+.app-theme-belltown .app-calendar-day > div > div,
+.app-theme-belltown .app-bar-calendar .app-week-header li.last-day-of-week,
+.app-theme-belltown .app-calendar-week-grid .app-calendar-day > div {
+    border-color: #7bb2ac;
+}
+
+    .app-theme-belltown .app-calendar-plugin span.app-current-day,
+    .app-theme-belltown .app-calendar-monthview .app-current-day,
+    .app-theme-belltown .app-calendar-yearview .app-current-day,
+    .app-theme-belltown .app-week-header .app-current-day,
+    .app-theme-belltown .app-day-header .visible-day.app-current-day,
+    .app-theme-belltown .app-has-current-day .current-time-line .dot {
+        background-color: #2d7f75;
+    }
+
+.app-theme-belltown .app-has-current-day .current-time-line {
+    border-color: #2d7f75;
+}
+
+.app-theme-belltown .app-day-header :not(.ui-btn-active).ui-btn .app-current-day,
+.app-theme-belltown .app-has-current-day .app-current-time,
+.app-theme-belltown .app-calendar-agenda-list > li.app-has-current-day h2:not(.ui-btn-active) > span,
+.app-theme-belltown .app-calendar-agenda-list li.app-time-line-container > .app-event-time {
+    color: #2d7f75;
+}
+
+.app-theme-belltown .app-calendar-plugin table tr.ui-btn-active td,
+.app-theme-belltown .app-calendar-plugin table td.ui-btn-active,
+.app-theme-belltown .app-calendar-yearview .app-calendar-month td.ui-btn-active {
+    background-color: #2d7f75 !important;
+}
+
+.app-theme-belltown .app-calendar-yearview .app-calendar-month td:not(.app-current-day):not(.ui-btn-active).app-has-data {
+    background-color: #dce5e4;
+}
+
+.app-theme-berry .app-calendar-plugin {
+    background-color: #fff;
+    color: #000;
+}
+
+.app-theme-berry .app-calendar-month-header {
+    color: #1f1f1f !important;
+}
+
+.app-theme-berry .app-calendar-monthview .app-calendar-month table td.app-calendar-weekend  {
+    background-color: #f2f2f2;
+}
+
+.app-theme-berry .app-calendar-plugin,
+.app-theme-berry .app-calendar-color-legend,
+.app-theme-berry .app-calendar-monthview .app-calendar-month table,
+.app-theme-berry .app-calendar-monthview .app-calendar-month table td,
+.app-theme-berry .app-calendar-day > div > div,
+.app-theme-berry .app-bar-calendar .app-week-header li.last-day-of-week,
+.app-theme-berry .app-calendar-week-grid .app-calendar-day > div {
+    border-color: #faa5c1;
+}
+
+    .app-theme-berry .app-calendar-plugin span.app-current-day,
+    .app-theme-berry .app-calendar-monthview .app-current-day,
+    .app-theme-berry .app-calendar-yearview .app-current-day,
+    .app-theme-berry .app-week-header .app-current-day,
+    .app-theme-berry .app-day-header .visible-day.app-current-day,
+    .app-theme-berry .app-has-current-day .current-time-line .dot {
+        background-color: #6b080d;
+    }
+
+.app-theme-berry .app-has-current-day .current-time-line {
+    border-color: #6b080d;
+}
+
+.app-theme-berry .app-day-header :not(.ui-btn-active).ui-btn .app-current-day,
+.app-theme-berry .app-has-current-day .app-current-time,
+.app-theme-berry .app-calendar-agenda-list > li.app-has-current-day h2:not(.ui-btn-active) > span,
+.app-theme-berry .app-calendar-agenda-list li.app-time-line-container > .app-event-time {
+    color: #6b080d;
+}
+
+.app-theme-berry .app-calendar-plugin table tr.ui-btn-active td,
+.app-theme-berry .app-calendar-plugin table td.ui-btn-active,
+.app-theme-berry .app-calendar-yearview .app-calendar-month td.ui-btn-active {
+    background-color: #6b080d !important;
+}
+
+.app-theme-berry .app-calendar-yearview .app-calendar-month td:not(.app-current-day):not(.ui-btn-active).app-has-data {
+    background-color: #fef3f6;
+}
+
+.app-theme-bittersweet .app-calendar-plugin {
+    background-color: #fff;
+    color: #000;
+}
+
+.app-theme-bittersweet .app-calendar-month-header,
+.app-theme-bittersweet .app-calendar-month-header h1 {
+    color: #1f1f1f !important;
+}
+
+.app-theme-bittersweet .app-calendar-monthview .app-calendar-month table td.app-calendar-weekend {
+    /*background-color: #f2f2f2;*/
+}
+
+.app-theme-bittersweet .app-calendar-plugin,
+.app-theme-bittersweet .app-calendar-color-legend,
+.app-theme-bittersweet .app-calendar-monthview .app-calendar-month table,
+.app-theme-bittersweet .app-calendar-monthview .app-calendar-month table td,
+.app-theme-bittersweet .app-calendar-day > div > div,
+.app-theme-bittersweet .app-bar-calendar .app-week-header li.last-day-of-week,
+.app-theme-bittersweet .app-calendar-week-grid .app-calendar-day > div {
+    border-color: #f3e1a7;
+}
+
+    .app-theme-bittersweet .app-calendar-plugin span.app-current-day,
+    .app-theme-bittersweet .app-calendar-monthview .app-current-day,
+    .app-theme-bittersweet .app-calendar-yearview .app-current-day,
+    .app-theme-bittersweet .app-week-header .app-current-day,
+    .app-theme-bittersweet .app-day-header .visible-day.app-current-day,
+    .app-theme-bittersweet .app-has-current-day .current-time-line .dot {
+        background-color: #b4a162;
+    }
+
+.app-theme-bittersweet .app-has-current-day .current-time-line {
+    border-color: #b4a162;
+}
+
+.app-theme-bittersweet .app-day-header :not(.ui-btn-active).ui-btn .app-current-day,
+.app-theme-bittersweet .app-has-current-day .app-current-time,
+.app-theme-bittersweet .app-calendar-agenda-list > li.app-has-current-day h2:not(.ui-btn-active) > span,
+.app-theme-bittersweet .app-calendar-agenda-list li.app-time-line-container > .app-event-time {
+    color: #b4a162;
+}
+
+.app-theme-bittersweet .app-calendar-plugin table tr.ui-btn-active td,
+.app-theme-bittersweet .app-calendar-plugin table td.ui-btn-active,
+.app-theme-bittersweet .app-calendar-yearview .app-calendar-month td.ui-btn-active {
+    background-color: #b4a162 !important;
+}
+
+.app-theme-bittersweet .app-calendar-yearview .app-calendar-month td:not(.app-current-day):not(.ui-btn-active).app-has-data {
+    background-color: #fdfaf2;
+}
+
+
+.app-theme-cay .app-calendar-plugin {
+    background-color: #fff;
+    color: #000;
+}
+
+.app-theme-cay .app-calendar-month-header,
+.app-theme-cay .app-calendar-month-header h1 {
+    color: #2c8e00 !important;
+}
+
+.app-theme-cay .app-calendar-monthview .app-calendar-month table td.app-calendar-weekend {
+    /*background-color: #f2f2f2;*/
+}
+
+.app-theme-cay .app-calendar-plugin,
+.app-theme-cay .app-calendar-color-legend,
+.app-theme-cay .app-calendar-monthview .app-calendar-month table,
+.app-theme-cay .app-calendar-monthview .app-calendar-month table td,
+.app-theme-cay .app-calendar-day > div > div,
+.app-theme-cay .app-bar-calendar .app-week-header li.last-day-of-week,
+.app-theme-cay .app-calendar-week-grid .app-calendar-day > div {
+    border-color: #d2d2b4;
+}
+
+    .app-theme-cay .app-calendar-plugin span.app-current-day,
+    .app-theme-cay .app-calendar-monthview .app-current-day,
+    .app-theme-cay .app-calendar-yearview .app-current-day,
+    .app-theme-cay .app-week-header .app-current-day,
+    .app-theme-cay .app-day-header .visible-day.app-current-day,
+    .app-theme-cay .app-has-current-day .current-time-line .dot {
+        background-color: #848da5;
+    }
+
+.app-theme-cay .app-has-current-day .current-time-line {
+    border-color: #848da5;
+}
+
+.app-theme-cay .app-day-header :not(.ui-btn-active).ui-btn .app-current-day,
+.app-theme-cay .app-has-current-day .app-current-time,
+.app-theme-cay .app-calendar-agenda-list > li.app-has-current-day h2:not(.ui-btn-active) > span,
+.app-theme-cay .app-calendar-agenda-list li.app-time-line-container > .app-event-time {
+    color: #848da5;
+}
+
+.app-theme-cay .app-calendar-plugin table tr.ui-btn-active td,
+.app-theme-cay .app-calendar-plugin table td.ui-btn-active,
+.app-theme-cay .app-calendar-yearview .app-calendar-month td.ui-btn-active {
+    background-color: #12a4b4 !important;
+}
+
+.app-theme-cay .app-calendar-yearview .app-calendar-month td:not(.app-current-day):not(.ui-btn-active).app-has-data {
+    background-color: #f7f7e9;
+}
+
+.app-theme-citrus .app-calendar-plugin {
+    background-color: #fff;
+    color: #000;
+}
+
+.app-theme-citrus .app-calendar-month-header,
+.app-theme-citrus .app-calendar-month-header h1 {
+    color: #6B0000 !important;
+}
+
+.app-theme-citrus .app-calendar-monthview .app-calendar-month table td.app-calendar-weekend {
+    background-color: #F6FAE1;
+}
+
+.app-theme-citrus .app-calendar-plugin,
+.app-theme-citrus .app-calendar-color-legend,
+.app-theme-citrus .app-calendar-monthview .app-calendar-month table,
+.app-theme-citrus .app-calendar-monthview .app-calendar-month table td,
+.app-theme-citrus .app-calendar-day > div > div,
+.app-theme-citrus .app-bar-calendar .app-week-header li.last-day-of-week,
+.app-theme-citrus .app-calendar-week-grid .app-calendar-day > div {
+    border-color: #D7E8A7;
+}
+
+    .app-theme-citrus .app-calendar-plugin span.app-current-day,
+    .app-theme-citrus .app-calendar-monthview .app-current-day,
+    .app-theme-citrus .app-calendar-yearview .app-current-day,
+    .app-theme-citrus .app-week-header .app-current-day,
+    .app-theme-citrus .app-day-header .visible-day.app-current-day,
+    .app-theme-citrus .app-has-current-day .current-time-line .dot {
+        background-color: #ACBA82;
+    }
+
+.app-theme-citrus .app-has-current-day .current-time-line {
+    border-color: #ACBA82;
+}
+
+.app-theme-citrus .app-day-header :not(.ui-btn-active).ui-btn .app-current-day,
+.app-theme-citrus .app-has-current-day .app-current-time,
+.app-theme-citrus .app-calendar-agenda-list > li.app-has-current-day h2:not(.ui-btn-active) > span,
+.app-theme-citrus .app-calendar-agenda-list li.app-time-line-container > .app-event-time {
+    color: #ACBA82;
+}
+
+.app-theme-citrus .app-calendar-plugin table tr.ui-btn-active td,
+.app-theme-citrus .app-calendar-plugin table td.ui-btn-active,
+.app-theme-citrus .app-calendar-yearview .app-calendar-month td.ui-btn-active {
+    background-color: #ACBA82 !important;
+}
+
+.app-theme-citrus .app-calendar-yearview .app-calendar-month td:not(.app-current-day):not(.ui-btn-active).app-has-data {
+    background-color: #F6FAE1;
+}
+
+.app-theme-citrus .app-calendar-agenda-list h2,
+.app-theme-citrus .app-calendar-agenda-list .app-event-time {
+    color: #000;
+}
+
+
+.app-theme-classic .app-calendar-plugin,
+.app-theme-classic .app-calendar {
+    background-color: #fff;
+    color: #000;
+}
+
+.app-theme-classic .app-calendar-month-header,
+.app-theme-classic .app-calendar-month-header h1 {
+    color: #1659d8 !important;
+}
+
+.app-theme-classic .app-calendar-monthview .app-calendar-month table td.app-calendar-weekend {
+    background-color: #e2ebfc;
+}
+
+.app-theme-classic .app-calendar-plugin,
+.app-theme-classic .app-calendar-color-legend,
+.app-theme-classic .app-calendar-monthview .app-calendar-month table,
+.app-theme-classic .app-calendar-monthview .app-calendar-month table td,
+.app-theme-classic .app-calendar-day > div > div,
+.app-theme-classic .app-bar-calendar .app-week-header li.last-day-of-week,
+.app-theme-classic .app-calendar-week-grid .app-calendar-day > div {
+    border-color: #b6cdf7;
+}
+
+    .app-theme-classic .app-calendar-plugin span.app-current-day,
+    .app-theme-classic .app-calendar-monthview .app-current-day,
+    .app-theme-classic .app-calendar-yearview .app-current-day,
+    .app-theme-classic .app-week-header .app-current-day,
+    .app-theme-classic .app-day-header .visible-day.app-current-day,
+    .app-theme-classic .app-has-current-day .current-time-line .dot {
+        background-color: #657b96;
+    }
+
+.app-theme-classic .app-has-current-day .current-time-line {
+    border-color: #657b96;
+}
+
+.app-theme-classic .app-day-header :not(.ui-btn-active).ui-btn .app-current-day,
+.app-theme-classic .app-has-current-day .app-current-time,
+.app-theme-classic .app-calendar-agenda-list > li.app-has-current-day h2:not(.ui-btn-active) > span,
+.app-theme-classic .app-calendar-agenda-list li.app-time-line-container > .app-event-time {
+    color: #657b96;
+}
+
+.app-theme-classic .app-calendar-plugin table tr.ui-btn-active td,
+.app-theme-classic .app-calendar-plugin table td.ui-btn-active,
+.app-theme-classic .app-calendar-yearview .app-calendar-month td.ui-btn-active {
+    background-color: #FFD253 !important;
+    color: #000 !important;
+}
+
+.app-theme-classic .app-calendar-yearview .app-calendar-month td:not(.app-current-day):not(.ui-btn-active).app-has-data {
+    background-color: #e2ebfc;
+}
+
+.app-theme-construct .app-calendar-plugin {
+    background-color: #fff;
+    color: #000;
+}
+
+.app-theme-construct .app-calendar-month-header,
+.app-theme-construct .app-calendar-month-header h1 {
+    color: #b78710 !important;
+}
+
+.app-theme-construct .app-calendar-monthview .app-calendar-month table td.app-calendar-weekend,
+.app-theme-construct .app-calendar-yearview .app-calendar-month td:not(.app-current-day):not(.ui-btn-active).app-has-data {
+    background-color: #f4f5ec;
+}
+
+.app-theme-construct .app-calendar-plugin,
+.app-theme-construct .app-calendar-color-legend,
+.app-theme-construct .app-calendar-monthview .app-calendar-month table,
+.app-theme-construct .app-calendar-monthview .app-calendar-month table td,
+.app-theme-construct .app-calendar-day > div > div,
+.app-theme-construct .app-bar-calendar .app-week-header li.last-day-of-week,
+.app-theme-construct .app-calendar-week-grid .app-calendar-day > div {
+    border-color: #d1d6b3;
+}
+
+    .app-theme-construct .app-calendar-plugin span.app-current-day,
+    .app-theme-construct .app-calendar-monthview .app-current-day,
+    .app-theme-construct .app-calendar-yearview .app-current-day,
+    .app-theme-construct .app-week-header .app-current-day,
+    .app-theme-construct .app-day-header .visible-day.app-current-day,
+    .app-theme-construct .app-has-current-day .current-time-line .dot {
+        background-color: #858e4c;
+    }
+
+.app-theme-construct .app-has-current-day .current-time-line {
+    border-color: #858e4c;
+}
+
+.app-theme-construct .app-day-header :not(.ui-btn-active).ui-btn .app-current-day,
+.app-theme-construct .app-has-current-day .app-current-time,
+.app-theme-construct .app-calendar-agenda-list > li.app-has-current-day h2:not(.ui-btn-active) > span,
+.app-theme-construct .app-calendar-agenda-list li.app-time-line-container > .app-event-time {
+    color: #858e4c;
+}
+
+.app-theme-construct .app-calendar-plugin table tr.ui-btn-active td,
+.app-theme-construct .app-calendar-plugin table td.ui-btn-active,
+.app-theme-construct .app-calendar-yearview .app-calendar-month td.ui-btn-active {
+    background-color: #5c8fd1 !important;
+}
+
+.app-theme-convention .app-calendar-plugin {
+    background-color: #fff;
+    color: #000;
+}
+
+.app-theme-convention .app-calendar-monthview .app-calendar-month table td.app-calendar-weekend,
+.app-theme-convention .app-calendar-yearview .app-calendar-month td:not(.app-current-day):not(.ui-btn-active).app-has-data {
+    background-color: #fcfdef;
+}
+
+.app-theme-convention .app-calendar-plugin,
+.app-theme-convention .app-calendar-color-legend,
+.app-theme-convention .app-calendar-monthview .app-calendar-month table,
+.app-theme-convention .app-calendar-monthview .app-calendar-month table td,
+.app-theme-convention .app-calendar-day > div > div,
+.app-theme-convention .app-bar-calendar .app-week-header li.last-day-of-week,
+.app-theme-convention .app-calendar-week-grid .app-calendar-day > div {
+    border-color: #eef095;
+}
+
+    .app-theme-convention .app-calendar-plugin span.app-current-day,
+    .app-theme-convention .app-calendar-monthview .app-current-day,
+    .app-theme-convention .app-calendar-yearview .app-current-day,
+    .app-theme-convention .app-week-header .app-current-day,
+    .app-theme-convention .app-day-header .visible-day.app-current-day,
+    .app-theme-convention .app-has-current-day .current-time-line .dot {
+        background-color: #95a201;
+    }
+
+.app-theme-convention .app-has-current-day .current-time-line {
+    border-color: #95a201;
+}
+
+.app-theme-convention .app-day-header :not(.ui-btn-active).ui-btn .app-current-day,
+.app-theme-convention .app-has-current-day .app-current-time,
+.app-theme-convention .app-calendar-agenda-list > li.app-has-current-day h2:not(.ui-btn-active) > span,
+.app-theme-convention .app-calendar-agenda-list li.app-time-line-container > .app-event-time {
+    color: #95a201;
+}
+
+.app-theme-convention .app-calendar-plugin table tr.ui-btn-active td,
+.app-theme-convention .app-calendar-plugin table td.ui-btn-active,
+.app-theme-convention .app-calendar-yearview .app-calendar-month td.ui-btn-active {
+    background-color: #a2b000 !important;
+}
+
+.app-theme-convention .app-calendar-month-header,
+.app-theme-convention .app-calendar-month-header h1 {
+    color: #0c647c !important;
+}
+
+
+.app-theme-darkknight .app-calendar-plugin {
+    background-color: #fff;
+    color: #000;
+}
+
+.app-theme-darkknight .app-calendar-monthview .app-calendar-month table td.app-calendar-weekend,
+.app-theme-darkknight .app-calendar-yearview .app-calendar-month td:not(.app-current-day):not(.ui-btn-active).app-has-data {
+    background-color: #f3f3f3;
+}
+
+.app-theme-darkknight .app-calendar-plugin,
+.app-theme-darkknight .app-calendar-color-legend,
+.app-theme-darkknight .app-calendar-monthview .app-calendar-month table,
+.app-theme-darkknight .app-calendar-monthview .app-calendar-month table td,
+.app-theme-darkknight .app-calendar-day > div > div,
+.app-theme-darkknight .app-bar-calendar .app-week-header li.last-day-of-week,
+.app-theme-darkknight .app-calendar-week-grid .app-calendar-day > div {
+    border-color: #c6c6c6;
+}
+
+    .app-theme-darkknight .app-calendar-plugin span.app-current-day,
+    .app-theme-darkknight .app-calendar-monthview .app-current-day,
+    .app-theme-darkknight .app-calendar-yearview .app-current-day,
+    .app-theme-darkknight .app-week-header .app-current-day,
+    .app-theme-darkknight .app-day-header .visible-day.app-current-day,
+    .app-theme-darkknight .app-has-current-day .current-time-line .dot {
+        background-color: #9c0b12;
+    }
+
+.app-theme-darkknight .app-has-current-day .current-time-line {
+    border-color: #9c0b12;
+}
+
+.app-theme-darkknight .app-day-header :not(.ui-btn-active).ui-btn .app-current-day,
+.app-theme-darkknight .app-has-current-day .app-current-time,
+.app-theme-darkknight .app-calendar-agenda-list > li.app-has-current-day h2:not(.ui-btn-active) > span,
+.app-theme-darkknight .app-calendar-agenda-list li.app-time-line-container > .app-event-time {
+    color: #9c0b12;
+}
+
+.app-theme-darkknight .app-calendar-plugin table tr.ui-btn-active td,
+.app-theme-darkknight .app-calendar-plugin table td.ui-btn-active,
+.app-theme-darkknight .app-calendar-yearview .app-calendar-month td.ui-btn-active {
+    background-color: #9c0b12 !important;
+}
+
+.app-theme-darkknight .app-calendar-month-header,
+.app-theme-darkknight .app-calendar-month-header h1 {
+    color: #003366 !important;
+}
+
+
+.app-theme-felt .app-calendar-plugin {
+    background-color: #fff;
+    color: #000;
+}
+
+.app-theme-felt .app-calendar-monthview .app-calendar-month table td.app-calendar-weekend,
+.app-theme-felt .app-calendar-yearview .app-calendar-month td:not(.app-current-day):not(.ui-btn-active).app-has-data {
+    background-color: #ecf0f0;
+}
+
+.app-theme-felt .app-calendar-plugin,
+.app-theme-felt .app-calendar-color-legend,
+.app-theme-felt .app-calendar-monthview .app-calendar-month table,
+.app-theme-felt .app-calendar-monthview .app-calendar-month table td,
+.app-theme-felt .app-calendar-day > div > div,
+.app-theme-felt .app-bar-calendar .app-week-header li.last-day-of-week,
+.app-theme-felt .app-calendar-week-grid .app-calendar-day > div {
+    border-color: #beb9aa;
+}
+
+    .app-theme-felt .app-calendar-plugin span.app-current-day,
+    .app-theme-felt .app-calendar-monthview .app-current-day,
+    .app-theme-felt .app-calendar-yearview .app-current-day,
+    .app-theme-felt .app-week-header .app-current-day,
+    .app-theme-felt .app-day-header .visible-day.app-current-day,
+    .app-theme-felt .app-has-current-day .current-time-line .dot {
+        background-color: #d5ab61;
+    }
+
+.app-theme-felt .app-has-current-day .current-time-line {
+    border-color: #d5ab61;
+}
+
+.app-theme-felt .app-day-header :not(.ui-btn-active).ui-btn .app-current-day,
+.app-theme-felt .app-has-current-day .app-current-time,
+.app-theme-felt .app-calendar-agenda-list > li.app-has-current-day h2:not(.ui-btn-active) > span,
+.app-theme-felt .app-calendar-agenda-list li.app-time-line-container > .app-event-time {
+    color: #d5ab61;
+}
+
+.app-theme-felt .app-calendar-plugin table tr.ui-btn-active td,
+.app-theme-felt .app-calendar-plugin table td.ui-btn-active,
+.app-theme-felt .app-calendar-yearview .app-calendar-month td.ui-btn-active {
+    background-color: #95a201 !important;
+}
+
+.app-theme-felt .app-calendar-month-header,
+.app-theme-felt .app-calendar-month-header h1 {
+    color: #919649 !important;
+}
+
+.app-theme-graham .app-calendar-plugin,
+.app-theme-graham .app-calendar {
+    background-color: #fff;
+    color: #000;
+}
+
+.app-theme-graham .app-calendar-monthview .app-calendar-month table td.app-calendar-weekend,
+.app-theme-graham .app-calendar-yearview .app-calendar-month td:not(.app-current-day):not(.ui-btn-active).app-has-data {
+    background-color: #fff7ed;
+}
+
+.app-theme-graham .app-calendar-plugin,
+.app-theme-graham .app-calendar-color-legend,
+.app-theme-graham .app-calendar-monthview .app-calendar-month table,
+.app-theme-graham .app-calendar-monthview .app-calendar-month table td,
+.app-theme-graham .app-calendar-day > div > div,
+.app-theme-graham .app-bar-calendar .app-week-header li.last-day-of-week,
+.app-theme-graham .app-calendar-week-grid .app-calendar-day > div {
+    border-color: #fed49d;
+}
+
+    .app-theme-graham .app-calendar-plugin span.app-current-day,
+    .app-theme-graham .app-calendar-monthview .app-current-day,
+    .app-theme-graham .app-calendar-yearview .app-current-day,
+    .app-theme-graham .app-week-header .app-current-day,
+    .app-theme-graham .app-day-header .visible-day.app-current-day,
+    .app-theme-graham .app-has-current-day .current-time-line .dot {
+        background-color: #d27800;
+    }
+
+.app-theme-graham .app-has-current-day .current-time-line {
+    border-color: #d27800;
+}
+
+.app-theme-graham .app-day-header :not(.ui-btn-active).ui-btn .app-current-day,
+.app-theme-graham .app-has-current-day .app-current-time,
+.app-theme-graham .app-calendar-agenda-list > li.app-has-current-day h2:not(.ui-btn-active) > span,
+.app-theme-graham .app-calendar-agenda-list li.app-time-line-container > .app-event-time {
+    color: #d27800;
+}
+
+.app-theme-graham .app-calendar-plugin table tr.ui-btn-active td,
+.app-theme-graham .app-calendar-plugin table td.ui-btn-active,
+.app-theme-graham .app-calendar-yearview .app-calendar-month td.ui-btn-active {
+    background-color: #d27800 !important;
+}
+
+.app-theme-graham .app-calendar-month-header,
+.app-theme-graham .app-calendar-month-header h1 {
+    color: #573e25 !important;
+}
+
+.app-theme-granite .app-calendar-plugin {
+    background-color: #fff;
+    color: #000;
+}
+
+.app-theme-granite .app-bar-calendar {
+    background-color: #fff0db;
+}
+
+.app-theme-granite .app-calendar-monthview .app-calendar-month table td.app-calendar-weekend {
+    background-color: #fffcf3;
+}
+
+.app-theme-granite .app-calendar-yearview .app-calendar-month td:not(.app-current-day):not(.ui-btn-active).app-has-data {
+    background-color: #fff0db;
+}
+
+.app-theme-granite .app-calendar-plugin,
+.app-theme-granite .app-calendar-color-legend,
+.app-theme-granite .app-calendar-monthview .app-calendar-month table,
+.app-theme-granite .app-calendar-monthview .app-calendar-month table td,
+.app-theme-granite .app-calendar-day > div > div,
+.app-theme-granite .app-bar-calendar .app-week-header li.last-day-of-week,
+.app-theme-granite .app-calendar-week-grid .app-calendar-day > div {
+    border-color: #bcaaa7;
+}
+
+    .app-theme-granite .app-calendar-plugin span.app-current-day,
+    .app-theme-granite .app-calendar-monthview .app-current-day,
+    .app-theme-granite .app-calendar-yearview .app-current-day,
+    .app-theme-granite .app-week-header .app-current-day,
+    .app-theme-granite .app-day-header .visible-day.app-current-day,
+    .app-theme-granite .app-has-current-day .current-time-line .dot {
+        background-color: #a88a86;
+    }
+
+.app-theme-granite .app-has-current-day .current-time-line {
+    border-color: #a88a86;
+}
+
+.app-theme-granite .app-day-header :not(.ui-btn-active).ui-btn .app-current-day,
+.app-theme-granite .app-has-current-day .app-current-time,
+.app-theme-granite .app-calendar-agenda-list > li.app-has-current-day h2:not(.ui-btn-active) > span,
+.app-theme-granite .app-calendar-agenda-list li.app-time-line-container > .app-event-time {
+    color: #a88a86;
+}
+
+.app-theme-granite .app-calendar-plugin table tr.ui-btn-active td,
+.app-theme-granite .app-calendar-plugin table td.ui-btn-active,
+.app-theme-granite .app-calendar-yearview .app-calendar-month td.ui-btn-active {
+    background-color: #5e8abf !important;
+}
+
+.app-theme-granite .app-calendar-month-header,
+.app-theme-granite .app-calendar-month-header h1 {
+    color: #573e25 !important;
+}
+
+.app-theme-grapello .app-calendar-plugin,
+.app-theme-grapello .app-calendar {
+    background-color: #fff;
+    color: #000;
+}
+
+.app-theme-grapello .app-calendar-monthview .app-calendar-month table td.app-calendar-weekend,
+.app-theme-grapello .app-calendar-yearview .app-calendar-month td:not(.app-current-day):not(.ui-btn-active).app-has-data {
+    background-color: #ECE4F3;
+}
+
+.app-theme-grapello .app-calendar-plugin,
+.app-theme-grapello .app-calendar-color-legend,
+.app-theme-grapello .app-calendar-monthview .app-calendar-month table,
+.app-theme-grapello .app-calendar-monthview .app-calendar-month table td,
+.app-theme-grapello .app-calendar-day > div > div,
+.app-theme-grapello .app-bar-calendar .app-week-header li.last-day-of-week,
+.app-theme-grapello .app-calendar-week-grid .app-calendar-day > div {
+    border-color: #d2b1ee;
+}
+
+    .app-theme-grapello .app-calendar-plugin span.app-current-day,
+    .app-theme-grapello .app-calendar-monthview .app-current-day,
+    .app-theme-grapello .app-calendar-yearview .app-current-day,
+    .app-theme-grapello .app-week-header .app-current-day,
+    .app-theme-grapello .app-day-header .visible-day.app-current-day,
+    .app-theme-grapello .app-has-current-day .current-time-line .dot {
+        background-color: #7f2dc6;
+    }
+
+.app-theme-grapello .app-has-current-day .current-time-line {
+    border-color: #7f2dc6;
+}
+
+.app-theme-grapello .app-day-header :not(.ui-btn-active).ui-btn .app-current-day,
+.app-theme-grapello .app-has-current-day .app-current-time,
+.app-theme-grapello .app-calendar-agenda-list > li.app-has-current-day h2:not(.ui-btn-active) > span,
+.app-theme-grapello .app-calendar-agenda-list li.app-time-line-container > .app-event-time {
+    color: #7f2dc6;
+}
+
+.app-theme-grapello .app-calendar-plugin table tr.ui-btn-active td,
+.app-theme-grapello .app-calendar-plugin table td.ui-btn-active,
+.app-theme-grapello .app-calendar-yearview .app-calendar-month td.ui-btn-active {
+    background-color: #7f2dc6 !important;
+}
+
+.app-theme-grapello .app-calendar-month-header,
+.app-theme-grapello .app-calendar-month-header h1 {
+    color: #573e25 !important;
+}
+
+.app-theme-gravity .app-calendar-plugin,
+.app-theme-gravity .app-calendar {
+    background-color: #fff;
+    color: #000;
+}
+
+.app-theme-gravity .app-bar-calendar {
+    background-color: #f6f7f8;
+}
+
+.app-theme-gravity .app-calendar-monthview .app-calendar-month table td.app-calendar-weekend {
+    background-color: #f6f7f8;
+}
+
+.app-theme-gravity .app-calendar-yearview .app-calendar-month td:not(.app-current-day):not(.ui-btn-active).app-has-data {
+    background-color: #ebebeb;
+}
+
+.app-theme-gravity .app-calendar-plugin,
+.app-theme-gravity .app-calendar-color-legend,
+.app-theme-gravity .app-calendar-monthview .app-calendar-month table,
+.app-theme-gravity .app-calendar-monthview .app-calendar-month table td,
+.app-theme-gravity .app-calendar-day > div > div,
+.app-theme-gravity .app-bar-calendar .app-week-header li.last-day-of-week,
+.app-theme-gravity .app-calendar-week-grid .app-calendar-day > div {
+    border-color: #d9d9d9;
+}
+
+    .app-theme-gravity .app-calendar-plugin span.app-current-day,
+    .app-theme-gravity .app-calendar-monthview .app-current-day,
+    .app-theme-gravity .app-calendar-yearview .app-current-day,
+    .app-theme-gravity .app-week-header .app-current-day,
+    .app-theme-gravity .app-day-header .visible-day.app-current-day,
+    .app-theme-gravity .app-has-current-day .current-time-line .dot {
+        background-color: #1964ec;
+    }
+
+.app-theme-gravity .app-has-current-day .current-time-line {
+    border-color: #1964ec;
+}
+
+.app-theme-gravity .app-day-header :not(.ui-btn-active).ui-btn .app-current-day,
+.app-theme-gravity .app-has-current-day .app-current-time,
+.app-theme-gravity .app-calendar-agenda-list > li.app-has-current-day h2:not(.ui-btn-active) > span,
+.app-theme-gravity .app-calendar-agenda-list li.app-time-line-container > .app-event-time {
+    color: #1964ec;
+}
+
+.app-theme-gravity .app-calendar-plugin table tr.ui-btn-active td,
+.app-theme-gravity .app-calendar-plugin table td.ui-btn-active,
+.app-theme-gravity .app-calendar-yearview .app-calendar-month td.ui-btn-active {
+    background-color: #1964ec !important;
+}
+
+.app-theme-gravity .app-calendar-month-header,
+.app-theme-gravity .app-calendar-month-header h1 {
+    color: #3b96b6 !important;
+}
+
+.app-theme-lacquer .app-calendar-plugin {
+    background-color: #fff;
+    color: #000;
+}
+
+.app-theme-lacquer .app-calendar-monthview .app-calendar-month table td.app-calendar-weekend {
+    background-color: #eef5f6;
+}
+
+.app-theme-lacquer .app-calendar-yearview .app-calendar-month td:not(.app-current-day):not(.ui-btn-active).app-has-data {
+    background-color: #eef5f6;
+}
+
+.app-theme-lacquer .app-calendar-plugin,
+.app-theme-lacquer .app-calendar-color-legend,
+.app-theme-lacquer .app-calendar-monthview .app-calendar-month table,
+.app-theme-lacquer .app-calendar-monthview .app-calendar-month table td,
+.app-theme-lacquer .app-calendar-day > div > div,
+.app-theme-lacquer .app-bar-calendar .app-week-header li.last-day-of-week,
+.app-theme-lacquer .app-calendar-week-grid .app-calendar-day > div {
+    border-color: #707984;
+}
+
+    .app-theme-lacquer .app-calendar-plugin span.app-current-day,
+    .app-theme-lacquer .app-calendar-monthview .app-current-day,
+    .app-theme-lacquer .app-calendar-yearview .app-current-day,
+    .app-theme-lacquer .app-week-header .app-current-day,
+    .app-theme-lacquer .app-day-header .visible-day.app-current-day,
+    .app-theme-lacquer .app-has-current-day .current-time-line .dot {
+        background-color: #d66617;
+    }
+
+.app-theme-lacquer .app-has-current-day .current-time-line {
+    border-color: #d66617;
+}
+
+.app-theme-lacquer .app-day-header :not(.ui-btn-active).ui-btn .app-current-day,
+.app-theme-lacquer .app-has-current-day .app-current-time,
+.app-theme-lacquer .app-calendar-agenda-list > li.app-has-current-day h2:not(.ui-btn-active) > span,
+.app-theme-lacquer .app-calendar-agenda-list li.app-time-line-container > .app-event-time {
+    color: #d66617;
+}
+
+.app-theme-lacquer .app-calendar-plugin table tr.ui-btn-active td,
+.app-theme-lacquer .app-calendar-plugin table td.ui-btn-active,
+.app-theme-lacquer .app-calendar-yearview .app-calendar-month td.ui-btn-active {
+    background-color: #d66617 !important;
+}
+
+.app-theme-lacquer .app-calendar-month-header,
+.app-theme-lacquer .app-calendar-month-header h1 {
+    color: #002570 !important;
+}
+
+.app-theme-laminate .app-calendar-plugin {
+    background-color: #fff;
+    color: #000;
+}
+
+.app-theme-laminate .app-bar-calendar {
+    background-color: #eef1ef;
+}
+
+.app-theme-laminate .app-calendar-monthview .app-calendar-month table td.app-calendar-weekend {
+    background-color: #fbf7f7;
+}
+
+.app-theme-laminate .app-calendar-yearview .app-calendar-month td:not(.app-current-day):not(.ui-btn-active).app-has-data {
+    background-color: #fbf7f7;
+}
+
+.app-theme-laminate .app-calendar-plugin,
+.app-theme-laminate .app-calendar-color-legend,
+.app-theme-laminate .app-calendar-monthview .app-calendar-month table,
+.app-theme-laminate .app-calendar-monthview .app-calendar-month table td,
+.app-theme-laminate .app-calendar-day > div > div,
+.app-theme-laminate .app-bar-calendar .app-week-header li.last-day-of-week,
+.app-theme-laminate .app-calendar-week-grid .app-calendar-day > div {
+    border-color: #e3c7cd;
+}
+
+    .app-theme-laminate .app-calendar-plugin span.app-current-day,
+    .app-theme-laminate .app-calendar-monthview .app-current-day,
+    .app-theme-laminate .app-calendar-yearview .app-current-day,
+    .app-theme-laminate .app-week-header .app-current-day,
+    .app-theme-laminate .app-day-header .visible-day.app-current-day,
+    .app-theme-laminate .app-has-current-day .current-time-line .dot {
+        background-color: #aa8e8a;
+    }
+
+.app-theme-laminate .app-has-current-day .current-time-line {
+    border-color: #aa8e8a;
+}
+
+.app-theme-laminate .app-day-header :not(.ui-btn-active).ui-btn .app-current-day,
+.app-theme-laminate .app-has-current-day .app-current-time,
+.app-theme-laminate .app-calendar-agenda-list > li.app-has-current-day h2:not(.ui-btn-active) > span,
+.app-theme-laminate .app-calendar-agenda-list li.app-time-line-container > .app-event-time {
+    color: #aa8e8a;
+}
+
+.app-theme-laminate .app-calendar-plugin .ui-btn.app-has-droparrow:not(.ui-radio-on):not(.app-btn-icon-transparent):not(.app-has-children):after {
+    background-color: transparent !important;
+}
+
+.app-theme-laminate .app-calendar-plugin table tr.ui-btn-active td,
+.app-theme-laminate .app-calendar-plugin table td.ui-btn-active,
+.app-theme-laminate .app-calendar-yearview .app-calendar-month td.ui-btn-active {
+    background-color: #d2a3af !important;
+}
+
+.app-theme-laminate .app-calendar-month-header,
+.app-theme-laminate .app-calendar-month-header h1 {
+    color: #281318 !important;
+}
+
+
+.app-theme-lichen .app-calendar-plugin,
+.app-theme-lichen .app-calendar {
+    background-color: #fff;
+    color: #000;
+}
+
+.app-theme-lichen .app-bar-calendar {
+    background-color: #f2f2f2;
+}
+
+.app-theme-lichen .app-calendar-monthview .app-calendar-month table td.app-calendar-weekend {
+    background-color: #f2f2f2;
+}
+
+.app-theme-lichen .app-calendar-yearview .app-calendar-month td:not(.app-current-day):not(.ui-btn-active).app-has-data {
+    background-color: #efefd7;
+}
+
+.app-theme-lichen .app-calendar-plugin,
+.app-theme-lichen .app-calendar-color-legend,
+.app-theme-lichen .app-calendar-monthview .app-calendar-month table,
+.app-theme-lichen .app-calendar-monthview .app-calendar-month table td,
+.app-theme-lichen .app-calendar-day > div > div,
+.app-theme-lichen .app-bar-calendar .app-week-header li.last-day-of-week,
+.app-theme-lichen .app-calendar-week-grid .app-calendar-day > div {
+    border-color: #c6c58f;
+}
+
+    .app-theme-lichen .app-calendar-plugin span.app-current-day,
+    .app-theme-lichen .app-calendar-monthview .app-current-day,
+    .app-theme-lichen .app-calendar-yearview .app-current-day,
+    .app-theme-lichen .app-week-header .app-current-day,
+    .app-theme-lichen .app-day-header .visible-day.app-current-day,
+    .app-theme-lichen .app-has-current-day .current-time-line .dot {
+        background-color: #a8a761;
+    }
+
+.app-theme-lichen .app-has-current-day .current-time-line {
+    border-color: #a8a761;
+}
+
+.app-theme-lichen .app-day-header :not(.ui-btn-active).ui-btn .app-current-day,
+.app-theme-lichen .app-has-current-day .app-current-time,
+.app-theme-lichen .app-calendar-agenda-list > li.app-has-current-day h2:not(.ui-btn-active) > span,
+.app-theme-lichen .app-calendar-agenda-list li.app-time-line-container > .app-event-time {
+    color: #a8a761;
+}
+
+.app-theme-lichen .app-calendar-plugin table tr.ui-btn-active td,
+.app-theme-lichen .app-calendar-plugin table td.ui-btn-active,
+.app-theme-lichen .app-calendar-yearview .app-calendar-month td.ui-btn-active {
+    background-color: #a8a761 !important;
+}
+
+.app-theme-lichen .app-calendar-month-header,
+.app-theme-lichen .app-calendar-month-header h1 {
+    color: #003399 !important;
+}
+
+
+.app-theme-mission .app-calendar-plugin,
+.app-theme-mission .app-calendar {
+    background-color: #fff;
+    color: #000;
+}
+
+.app-theme-mission .app-bar-calendar {
+    background-color: #f2f2f2;
+}
+
+.app-theme-mission .app-calendar-monthview .app-calendar-month table td.app-calendar-weekend {
+    background-color: #e5f1d5;
+}
+
+.app-theme-mission .app-calendar-yearview .app-calendar-month td:not(.app-current-day):not(.ui-btn-active).app-has-data {
+    background-color: #e5f1d5;
+}
+
+.app-theme-mission .app-calendar-plugin,
+.app-theme-mission .app-calendar-color-legend,
+.app-theme-mission .app-calendar-monthview .app-calendar-month table,
+.app-theme-mission .app-calendar-monthview .app-calendar-month table td,
+.app-theme-mission .app-calendar-day > div > div,
+.app-theme-mission .app-bar-calendar .app-week-header li.last-day-of-week,
+.app-theme-mission .app-calendar-week-grid .app-calendar-day > div {
+    border-color: #badb8f;
+}
+
+    .app-theme-mission .app-calendar-plugin span.app-current-day,
+    .app-theme-mission .app-calendar-monthview .app-current-day,
+    .app-theme-mission .app-calendar-yearview .app-current-day,
+    .app-theme-mission .app-week-header .app-current-day,
+    .app-theme-mission .app-day-header .visible-day.app-current-day,
+    .app-theme-mission .app-has-current-day .current-time-line .dot {
+        background-color: #4c6c22;
+    }
+
+.app-theme-mission .app-has-current-day .current-time-line {
+    border-color: #4c6c22;
+}
+
+.app-theme-mission .app-day-header :not(.ui-btn-active).ui-btn .app-current-day,
+.app-theme-mission .app-has-current-day .app-current-time,
+.app-theme-mission .app-calendar-agenda-list > li.app-has-current-day h2:not(.ui-btn-active) > span,
+.app-theme-mission .app-calendar-agenda-list li.app-time-line-container > .app-event-time {
+    color: #4c6c22;
+}
+
+.app-theme-mission .app-calendar-plugin table tr.ui-btn-active td,
+.app-theme-mission .app-calendar-plugin table td.ui-btn-active,
+.app-theme-mission .app-calendar-yearview .app-calendar-month td.ui-btn-active {
+    background-color: #4c6c22 !important;
+}
+
+.app-theme-mission .app-calendar-month-header,
+.app-theme-mission .app-calendar-month-header h1 {
+    color: #3c2902 !important;
+}
+
+.app-theme-modernrose .app-calendar-yearview .app-calendar-month td:not(.app-current-day):not(.ui-btn-active).app-has-data {
+    background-color: #fff0f6;
+}
+
+.app-theme-modernrose .app-calendar-plugin,
+.app-theme-modernrose .app-calendar-color-legend,
+.app-theme-modernrose .app-calendar-monthview .app-calendar-month table,
+.app-theme-modernrose .app-calendar-monthview .app-calendar-month table td,
+.app-theme-modernrose .app-calendar-day > div > div,
+.app-theme-modernrose .app-bar-calendar .app-week-header li.last-day-of-week,
+.app-theme-modernrose .app-calendar-week-grid .app-calendar-day > div {
+    border-color: #ffcce1;
+}
+
+    .app-theme-modernrose .app-calendar-plugin span.app-current-day,
+    .app-theme-modernrose .app-calendar-monthview .app-current-day,
+    .app-theme-modernrose .app-calendar-yearview .app-current-day,
+    .app-theme-modernrose .app-week-header .app-current-day,
+    .app-theme-modernrose .app-day-header .visible-day.app-current-day,
+    .app-theme-modernrose .app-has-current-day .current-time-line .dot {
+        background-color: #d50202;
+    }
+
+.app-theme-modernrose .app-has-current-day .current-time-line {
+    border-color: #d50202;
+}
+
+.app-theme-modernrose .app-day-header :not(.ui-btn-active).ui-btn .app-current-day,
+.app-theme-modernrose .app-has-current-day .app-current-time,
+.app-theme-modernrose .app-calendar-agenda-list > li.app-has-current-day h2:not(.ui-btn-active) > span,
+.app-theme-modernrose .app-calendar-agenda-list li.app-time-line-container > .app-event-time {
+    color: #d50202;
+}
+
+.app-theme-modernrose .app-calendar-plugin table tr.ui-btn-active td,
+.app-theme-modernrose .app-calendar-plugin table td.ui-btn-active,
+.app-theme-modernrose .app-calendar-yearview .app-calendar-month td.ui-btn-active {
+    background-color: #d50202 !important;
+}
+
+.app-theme-modernrose .app-calendar-month-header,
+.app-theme-modernrose .app-calendar-month-header h1 {
+    color: #f30064 !important;
+}
+
+.app-theme-municipal .app-calendar-plugin,
+.app-theme-municipal .app-calendar {
+    background-color: #fff;
+    color: #000;
+}
+
+.app-theme-municipal .app-bar-calendar {
+    background-color: #f2f2f2;
+}
+
+.app-theme-municipal .app-calendar-monthview .app-calendar-month table td.app-calendar-weekend {
+    background-color: #fdf3f0;
+}
+
+.app-theme-municipal .app-calendar-yearview .app-calendar-month td:not(.app-current-day):not(.ui-btn-active).app-has-data {
+    background-color: #fdf3f0;
+}
+
+.app-theme-municipal .app-calendar-plugin,
+.app-theme-municipal .app-calendar-color-legend,
+.app-theme-municipal .app-calendar-monthview .app-calendar-month table,
+.app-theme-municipal .app-calendar-monthview .app-calendar-month table td,
+.app-theme-municipal .app-calendar-day > div > div,
+.app-theme-municipal .app-bar-calendar .app-week-header li.last-day-of-week,
+.app-theme-municipal .app-calendar-week-grid .app-calendar-day > div {
+    border-color: #f4b29b;
+}
+
+    .app-theme-municipal .app-calendar-plugin span.app-current-day,
+    .app-theme-municipal .app-calendar-monthview .app-current-day,
+    .app-theme-municipal .app-calendar-yearview .app-current-day,
+    .app-theme-municipal .app-week-header .app-current-day,
+    .app-theme-municipal .app-day-header .visible-day.app-current-day,
+    .app-theme-municipal .app-has-current-day .current-time-line .dot {
+        background-color: #6f3e3e;
+    }
+
+.app-theme-municipal .app-has-current-day .current-time-line {
+    border-color: #6f3e3e;
+}
+
+.app-theme-municipal .app-day-header :not(.ui-btn-active).ui-btn .app-current-day,
+.app-theme-municipal .app-has-current-day .app-current-time,
+.app-theme-municipal .app-calendar-agenda-list > li.app-has-current-day h2:not(.ui-btn-active) > span,
+.app-theme-municipal .app-calendar-agenda-list li.app-time-line-container > .app-event-time {
+    color: #6f3e3e;
+}
+
+.app-theme-municipal .app-calendar-plugin table tr.ui-btn-active td,
+.app-theme-municipal .app-calendar-plugin table td.ui-btn-active,
+.app-theme-municipal .app-calendar-yearview .app-calendar-month td.ui-btn-active {
+    background-color: #6f3e3e !important;
+}
+
+.app-theme-municipal .app-calendar-month-header,
+.app-theme-municipal .app-calendar-month-header h1 {
+    color: #cc9900 !important;
+}
+
+.app-theme-petal .app-calendar {
+    background-color: #fff;
+    color: #000;
+}
+
+
+.app-theme-petal .app-bar-calendar {
+    background-color: #ffe5f0;
+}
+
+    .app-theme-petal .app-calendar-plugin,
+    .app-theme-petal .app-calendar-color-legend,
+    .app-theme-petal .app-calendar-monthview .app-calendar-month table,
+    .app-theme-petal .app-calendar-monthview .app-calendar-month table td,
+    .app-theme-petal .app-calendar-day > div > div,
+    .app-theme-petal .app-bar-calendar .app-week-header li.last-day-of-week,
+    .app-theme-petal .app-calendar-week-grid .app-calendar-day > div {
+        border-color: #cccccc;
+    }
+
+        .app-theme-petal .app-calendar-plugin span.app-current-day,
+        .app-theme-petal .app-calendar-monthview .app-current-day,
+        .app-theme-petal .app-calendar-yearview .app-current-day,
+        .app-theme-petal .app-week-header .app-current-day,
+        .app-theme-petal .app-day-header .visible-day.app-current-day,
+        .app-theme-petal .app-has-current-day .current-time-line .dot {
+            background-color: #91073c;
+        }
+
+.app-theme-petal .app-has-current-day .current-time-line {
+    border-color: #91073c;
+}
+
+.app-theme-petal .app-day-header :not(.ui-btn-active).ui-btn .app-current-day,
+.app-theme-petal .app-has-current-day .app-current-time,
+.app-theme-petal .app-calendar-agenda-list > li.app-has-current-day h2:not(.ui-btn-active) > span,
+.app-theme-petal .app-calendar-agenda-list li.app-time-line-container > .app-event-time {
+    color: #91073c;
+}
+
+.app-theme-petal .app-calendar-plugin table tr.ui-btn-active td,
+.app-theme-petal .app-calendar-plugin table td.ui-btn-active,
+.app-theme-petal .app-calendar-yearview .app-calendar-month td.ui-btn-active {
+    background-color: #91073c !important;
+}
+
+.app-theme-petal .app-calendar-month-header,
+.app-theme-petal .app-calendar-month-header h1 {
+    color: #91073c !important;
+}
+
+.app-theme-pinnate .app-calendar {
+    background-color: #fff;
+    color: #000;
+}
+
+.app-theme-pinnate .app-calendar-plugin,
+.app-theme-pinnate .app-calendar-color-legend,
+.app-theme-pinnate .app-calendar-monthview .app-calendar-month table,
+.app-theme-pinnate .app-calendar-monthview .app-calendar-month table td,
+.app-theme-pinnate .app-calendar-day > div > div,
+.app-theme-pinnate .app-bar-calendar .app-week-header li.last-day-of-week,
+.app-theme-pinnate .app-calendar-week-grid .app-calendar-day > div {
+    border-color: #cccccc;
+}
+
+    .app-theme-pinnate .app-calendar-plugin span.app-current-day,
+    .app-theme-pinnate .app-calendar-monthview .app-current-day,
+    .app-theme-pinnate .app-calendar-yearview .app-current-day,
+    .app-theme-pinnate .app-week-header .app-current-day,
+    .app-theme-pinnate .app-day-header .visible-day.app-current-day,
+    .app-theme-pinnate .app-has-current-day .current-time-line .dot {
+        background-color: #95a201;
+    }
+
+.app-theme-pinnate .app-has-current-day .current-time-line {
+    border-color: #95a201;
+}
+
+.app-theme-pinnate .app-day-header :not(.ui-btn-active).ui-btn .app-current-day,
+.app-theme-pinnate .app-has-current-day .app-current-time,
+.app-theme-pinnate .app-calendar-agenda-list > li.app-has-current-day h2:not(.ui-btn-active) > span,
+.app-theme-pinnate .app-calendar-agenda-list li.app-time-line-container > .app-event-time {
+    color: #95a201;
+}
+
+.app-theme-pinnate .app-calendar-plugin table tr.ui-btn-active td,
+.app-theme-pinnate .app-calendar-plugin table td.ui-btn-active,
+.app-theme-pinnate .app-calendar-yearview .app-calendar-month td.ui-btn-active {
+    background-color: #95a201 !important;
+}
+
+.app-theme-pinnate .app-calendar-month-header,
+.app-theme-pinnate .app-calendar-month-header h1 {
+    color: #a8220c !important;
+}
+
+.app-theme-plastic .app-calendar-plugin,
+.app-theme-plastic .app-calendar {
+    background-color: #fff;
+    color: #000;
+}
+
+.app-theme-plastic .app-bar-calendar {
+    background-color: #aef1fe;
+}
+
+.app-theme-plastic .app-calendar-monthview .app-calendar-month table td.app-calendar-weekend {
+    background-color: #cbf5fe;
+}
+
+.app-theme-plastic .app-calendar-yearview .app-calendar-month td:not(.app-current-day):not(.ui-btn-active).app-has-data {
+    background-color: #cbf5fe;
+}
+
+.app-theme-plastic .app-calendar-plugin,
+.app-theme-plastic .app-calendar-color-legend,
+.app-theme-plastic .app-calendar-monthview .app-calendar-month table,
+.app-theme-plastic .app-calendar-monthview .app-calendar-month table td,
+.app-theme-plastic .app-calendar-day > div > div,
+.app-theme-plastic .app-bar-calendar .app-week-header li.last-day-of-week,
+.app-theme-plastic .app-calendar-week-grid .app-calendar-day > div {
+    border-color: #3c9aad;
+}
+
+    .app-theme-plastic .app-calendar-plugin span.app-current-day,
+    .app-theme-plastic .app-calendar-monthview .app-current-day,
+    .app-theme-plastic .app-calendar-yearview .app-current-day,
+    .app-theme-plastic .app-week-header .app-current-day,
+    .app-theme-plastic .app-day-header .visible-day.app-current-day,
+    .app-theme-plastic .app-has-current-day .current-time-line .dot {
+        background-color: #095868;
+    }
+
+.app-theme-plastic .app-has-current-day .current-time-line {
+    border-color: #095868;
+}
+
+.app-theme-plastic .app-day-header :not(.ui-btn-active).ui-btn .app-current-day,
+.app-theme-plastic .app-has-current-day .app-current-time,
+.app-theme-plastic .app-calendar-agenda-list > li.app-has-current-day h2:not(.ui-btn-active) > span,
+.app-theme-plastic .app-calendar-agenda-list li.app-time-line-container > .app-event-time {
+    color: #095868;
+}
+
+.app-theme-plastic .app-calendar-plugin table tr.ui-btn-active td,
+.app-theme-plastic .app-calendar-plugin table td.ui-btn-active,
+.app-theme-plastic .app-calendar-yearview .app-calendar-month td.ui-btn-active {
+    background-color: #095868 !important;
+}
+
+.app-theme-plastic .app-calendar-month-header,
+.app-theme-plastic .app-calendar-month-header h1 {
+    color: #332015 !important;
+}
+
+.app-theme-ricasso .app-calendar-yearview .app-calendar-month td:not(.app-current-day):not(.ui-btn-active).app-has-data {
+    background-color: #fdf3f0;
+}
+
+.app-theme-ricasso .app-calendar-plugin span.app-current-day,
+.app-theme-ricasso .app-calendar-monthview .app-current-day,
+.app-theme-ricasso .app-calendar-yearview .app-current-day,
+.app-theme-ricasso .app-week-header .app-current-day,
+.app-theme-ricasso .app-day-header .visible-day.app-current-day,
+.app-theme-ricasso .app-has-current-day .current-time-line .dot {
+    background-color: #a01401;
+}
+
+.app-theme-ricasso .app-has-current-day .current-time-line {
+    border-color: #a01401;
+}
+
+.app-theme-ricasso .app-day-header :not(.ui-btn-active).ui-btn .app-current-day,
+.app-theme-ricasso .app-has-current-day .app-current-time,
+.app-theme-ricasso .app-calendar-agenda-list > li.app-has-current-day h2:not(.ui-btn-active) > span,
+.app-theme-ricasso .app-calendar-agenda-list li.app-time-line-container > .app-event-time {
+    color: #a01401;
+}
+
+.app-theme-ricasso .app-calendar-plugin table tr.ui-btn-active td,
+.app-theme-ricasso .app-calendar-plugin table td.ui-btn-active,
+.app-theme-ricasso .app-calendar-yearview .app-calendar-month td.ui-btn-active {
+    background-color: #a01401 !important;
+}
+
+.app-theme-ricasso .app-calendar-month-header,
+.app-theme-ricasso .app-calendar-month-header h1 {
+    color: #ff0000 !important;
+}
+
+.app-theme-simple .app-calendar-plugin span.app-current-day,
+.app-theme-simple .app-calendar-monthview .app-current-day,
+.app-theme-simple .app-calendar-yearview .app-current-day,
+.app-theme-simple .app-week-header .app-current-day,
+.app-theme-simple .app-day-header .visible-day.app-current-day,
+.app-theme-simple .app-has-current-day .current-time-line .dot {
+    background-color: #00268b;
+}
+
+.app-theme-simple .app-has-current-day .current-time-line {
+    border-color: #00268b;
+}
+
+.app-theme-simple .app-day-header :not(.ui-btn-active).ui-btn .app-current-day,
+.app-theme-simple .app-has-current-day .app-current-time,
+.app-theme-simple .app-calendar-agenda-list > li.app-has-current-day h2:not(.ui-btn-active) > span,
+.app-theme-simple .app-calendar-agenda-list li.app-time-line-container > .app-event-time {
+    color: #00268b;
+}
+
+.app-theme-simple .app-calendar-plugin table tr.ui-btn-active td,
+.app-theme-simple .app-calendar-plugin table td.ui-btn-active,
+.app-theme-simple .app-calendar-yearview .app-calendar-month td.ui-btn-active {
+    background-color: #00268b !important;
+}
+
+.app-theme-simple .app-calendar-month-header,
+.app-theme-simple .app-calendar-month-header h1 {
+    color: #003399 !important;
+}
+
+
+.app-theme-social .app-calendar {
+    background-color: #fff;
+    color: #000;
+}
+
+.app-theme-social .app-bar-calendar {
+    background-color: #e9eaed;
+    color: #000;
+}
+
+.app-theme-social .app-calendar-yearview .app-calendar-month td:not(.app-current-day):not(.ui-btn-active).app-has-data {
+    background-color: #e7f1fe;
+}
+
+.app-theme-social .app-calendar-plugin span.app-current-day,
+.app-theme-social .app-calendar-monthview .app-current-day,
+.app-theme-social .app-calendar-yearview .app-current-day,
+.app-theme-social .app-week-header .app-current-day,
+.app-theme-social .app-day-header .visible-day.app-current-day,
+.app-theme-social .app-has-current-day .current-time-line .dot {
+    background-color: #3b5998;
+}
+
+.app-theme-social .app-has-current-day .current-time-line {
+    border-color: #3b5998;
+}
+
+.app-theme-social .app-day-header :not(.ui-btn-active).ui-btn .app-current-day,
+.app-theme-social .app-has-current-day .app-current-time,
+.app-theme-social .app-calendar-agenda-list > li.app-has-current-day h2:not(.ui-btn-active) > span,
+.app-theme-social .app-calendar-agenda-list li.app-time-line-container > .app-event-time {
+    color: #3b5998;
+}
+
+.app-theme-social .app-calendar-plugin table tr.ui-btn-active td,
+.app-theme-social .app-calendar-plugin table td.ui-btn-active,
+.app-theme-social .app-calendar-yearview .app-calendar-month td.ui-btn-active {
+    background-color: #3b5998 !important;
+}
+
+.app-theme-social .app-calendar-month-header,
+.app-theme-social .app-calendar-month-header h1 {
+    color: #242a33 !important;
+}
+
+.app-theme-summer .app-calendar-plugin,
+.app-theme-summer .app-calendar {
+    background-color: #fff;
+    color: #000;
+}
+
+.app-theme-summer .app-calendar-monthview .app-calendar-month table td.app-calendar-weekend {
+    background-color: #f7f8f4;
+}
+
+.app-theme-summer .app-calendar-yearview .app-calendar-month td:not(.app-current-day):not(.ui-btn-active).app-has-data {
+    background-color: #ecf2ef;
+}
+
+.app-theme-summer .app-calendar-plugin,
+.app-theme-summer .app-calendar-color-legend,
+.app-theme-summer .app-calendar-monthview .app-calendar-month table,
+.app-theme-summer .app-calendar-monthview .app-calendar-month table td,
+.app-theme-summer .app-calendar-day > div > div,
+.app-theme-summer .app-bar-calendar .app-week-header li.last-day-of-week,
+.app-theme-summer .app-calendar-week-grid .app-calendar-day > div {
+    border-color: #c4d6cb;
+}
+
+.app-theme-summer .app-calendar-month-header,
+.app-theme-summer .app-calendar-month-header h1 {
+    color: #648f77 !important;
+}
+
+.app-theme-vantage .app-calendar-plugin,
+.app-theme-vantage .app-calendar {
+    background-color: #fff;
+    color: #000;
+}
+
+.app-theme-vantage .app-bar-calendar {
+    background-color: #ffebc4;
+}
+
+.app-theme-vantage .app-calendar-monthview .app-calendar-month table td.app-calendar-weekend {
+    background-color: #fffaf1;
+}
+
+.app-theme-vantage .app-calendar-yearview .app-calendar-month td:not(.app-current-day):not(.ui-btn-active).app-has-data {
+    background-color: #fffaf1;
+}
+
+.app-theme-vantage .app-calendar-plugin,
+.app-theme-vantage .app-calendar-color-legend,
+.app-theme-vantage .app-calendar-monthview .app-calendar-month table,
+.app-theme-vantage .app-calendar-monthview .app-calendar-month table td,
+.app-theme-vantage .app-calendar-day > div > div,
+.app-theme-vantage .app-bar-calendar .app-week-header li.last-day-of-week,
+.app-theme-vantage .app-calendar-week-grid .app-calendar-day > div {
+    border-color: #ffb219;
+}
+
+    .app-theme-vantage .app-calendar-plugin span.app-current-day,
+    .app-theme-vantage .app-calendar-monthview .app-current-day,
+    .app-theme-vantage .app-calendar-yearview .app-current-day,
+    .app-theme-vantage .app-week-header .app-current-day,
+    .app-theme-vantage .app-day-header .visible-day.app-current-day,
+    .app-theme-vantage .app-has-current-day .current-time-line .dot {
+        background-color: #445166;
+    }
+
+.app-theme-vantage .app-has-current-day .current-time-line {
+    border-color: #445166;
+}
+
+.app-theme-vantage .app-day-header :not(.ui-btn-active).ui-btn .app-current-day,
+.app-theme-vantage .app-has-current-day .app-current-time,
+.app-theme-vantage .app-calendar-agenda-list > li.app-has-current-day h2:not(.ui-btn-active) > span,
+.app-theme-vantage .app-calendar-agenda-list li.app-time-line-container > .app-event-time {
+    color: #445166;
+}
+
+.app-theme-vantage .app-calendar-plugin table tr.ui-btn-active td,
+.app-theme-vantage .app-calendar-plugin table td.ui-btn-active,
+.app-theme-vantage .app-calendar-yearview .app-calendar-month td.ui-btn-active {
+    background-color: #445166 !important;
+}
+
+.app-theme-vantage .app-calendar-month-header,
+.app-theme-vantage .app-calendar-month-header h1 {
+    color: #382500 !important;
+}
+
+
+.app-theme-verdant .app-calendar-plugin {
+    background-color: #f8ffea;
+}
+
+.app-theme-verdant .app-calendar {
+    background-color: #fff;
+    color: #000;
+}
+
+.app-theme-verdant .app-calendar-monthview .app-calendar-month table td.app-calendar-weekend {
+    background-color: #f8ffea;
+}
+
+.app-theme-verdant .app-calendar-yearview .app-calendar-month td:not(.app-current-day):not(.ui-btn-active).app-has-data {
+    background-color: #eaffbc;
+}
+
+.app-theme-verdant .app-calendar-plugin,
+.app-theme-verdant .app-calendar-color-legend,
+.app-theme-verdant .app-calendar-monthview .app-calendar-month table,
+.app-theme-verdant .app-calendar-monthview .app-calendar-month table td,
+.app-theme-verdant .app-calendar-day > div > div,
+.app-theme-verdant .app-bar-calendar .app-week-header li.last-day-of-week,
+.app-theme-verdant .app-calendar-week-grid .app-calendar-day > div {
+    border-color: #8fbf28;
+}
+
+    .app-theme-verdant .app-calendar-plugin span.app-current-day,
+    .app-theme-verdant .app-calendar-monthview .app-current-day,
+    .app-theme-verdant .app-calendar-yearview .app-current-day,
+    .app-theme-verdant .app-week-header .app-current-day,
+    .app-theme-verdant .app-day-header .visible-day.app-current-day,
+    .app-theme-verdant .app-has-current-day .current-time-line .dot {
+        background-color: #d2b47a;
+    }
+
+.app-theme-verdant .app-has-current-day .current-time-line {
+    border-color: #d2b47a;
+}
+
+.app-theme-verdant .app-day-header :not(.ui-btn-active).ui-btn .app-current-day,
+.app-theme-verdant .app-has-current-day .app-current-time,
+.app-theme-verdant .app-calendar-agenda-list > li.app-has-current-day h2:not(.ui-btn-active) > span,
+.app-theme-verdant .app-calendar-agenda-list li.app-time-line-container > .app-event-time {
+    color: #d2b47a;
+}
+
+.app-theme-verdant .app-calendar-plugin table tr.ui-btn-active td,
+.app-theme-verdant .app-calendar-plugin table td.ui-btn-active,
+.app-theme-verdant .app-calendar-yearview .app-calendar-month td.ui-btn-active {
+    background-color: #d2b47a !important;
+}
+
+.app-theme-verdant .app-calendar-month-header,
+.app-theme-verdant .app-calendar-month-header h1 {
+    color: #002570 !important;
+}
+
+.app-theme-viewpoint .app-calendar-plugin {
+    background-color: #fafbf0;
+}
+
+.app-theme-viewpoint .app-calendar {
+    background-color: #fff;
+    color: #000;
+}
+
+.app-theme-viewpoint .app-bar-calendar {
+    background-color: #e6f0d8;
+}
+
+.app-theme-viewpoint .app-calendar-monthview .app-calendar-month table td.app-calendar-weekend {
+    background-color: #fafbf0;
+}
+
+.app-theme-viewpoint .app-calendar-yearview .app-calendar-month td:not(.app-current-day):not(.ui-btn-active).app-has-data {
+    background-color: #e6f0d8;
+}
+
+.app-theme-viewpoint .app-calendar-plugin,
+.app-theme-viewpoint .app-calendar-color-legend,
+.app-theme-viewpoint .app-calendar-monthview .app-calendar-month table,
+.app-theme-viewpoint .app-calendar-monthview .app-calendar-month table td,
+.app-theme-viewpoint .app-calendar-day > div > div,
+.app-theme-viewpoint .app-bar-calendar .app-week-header li.last-day-of-week,
+.app-theme-viewpoint .app-calendar-week-grid .app-calendar-day > div {
+    border-color: #acbf2d;
+}
+
+    .app-theme-viewpoint .app-calendar-plugin span.app-current-day,
+    .app-theme-viewpoint .app-calendar-monthview .app-current-day,
+    .app-theme-viewpoint .app-calendar-yearview .app-current-day,
+    .app-theme-viewpoint .app-week-header .app-current-day,
+    .app-theme-viewpoint .app-day-header .visible-day.app-current-day,
+    .app-theme-viewpoint .app-has-current-day .current-time-line .dot {
+        background-color: #3c232a;
+    }
+
+.app-theme-viewpoint .app-has-current-day .current-time-line {
+    border-color: #3c232a;
+}
+
+.app-theme-viewpoint .app-day-header :not(.ui-btn-active).ui-btn .app-current-day,
+.app-theme-viewpoint .app-has-current-day .app-current-time,
+.app-theme-viewpoint .app-calendar-agenda-list > li.app-has-current-day h2:not(.ui-btn-active) > span,
+.app-theme-viewpoint .app-calendar-agenda-list li.app-time-line-container > .app-event-time {
+    color: #3c232a;
+}
+
+.app-theme-viewpoint .app-calendar-plugin table tr.ui-btn-active td,
+.app-theme-viewpoint .app-calendar-plugin table td.ui-btn-active,
+.app-theme-viewpoint .app-calendar-yearview .app-calendar-month td.ui-btn-active {
+    background-color: #3c232a !important;
+}
+
+.app-theme-viewpoint .app-calendar-month-header,
+.app-theme-viewpoint .app-calendar-month-header h1 {
+    color: #002570 !important;
+}
+
+.app-theme-whitesmoke .app-calendar-plugin span.app-current-day,
+.app-theme-whitesmoke .app-calendar-monthview .app-current-day,
+.app-theme-whitesmoke .app-calendar-yearview .app-current-day,
+.app-theme-whitesmoke .app-week-header .app-current-day,
+.app-theme-whitesmoke .app-day-header .visible-day.app-current-day,
+.app-theme-whitesmoke .app-has-current-day .current-time-line .dot {
+    background-color: #33b5e6;
+}
+
+.app-theme-whitesmoke .app-has-current-day .current-time-line {
+    border-color: #33b5e6;
+}
+
+.app-theme-whitesmoke .app-day-header :not(.ui-btn-active).ui-btn .app-current-day,
+.app-theme-whitesmoke .app-has-current-day .app-current-time,
+.app-theme-whitesmoke .app-calendar-agenda-list > li.app-has-current-day h2:not(.ui-btn-active) > span,
+.app-theme-whitesmoke .app-calendar-agenda-list li.app-time-line-container > .app-event-time {
+    color: #33b5e6;
+}
+
+.app-theme-whitesmoke .app-calendar-plugin table tr.ui-btn-active td,
+.app-theme-whitesmoke .app-calendar-plugin table td.ui-btn-active,
+.app-theme-whitesmoke .app-calendar-yearview .app-calendar-month td.ui-btn-active {
+    background-color: #33b5e6 !important;
+}
+
+.app-theme-whitesmoke .app-calendar-month-header,
+.app-theme-whitesmoke .app-calendar-month-header h1 {
+    color: #58585a !important;
+}
+
+.app-theme-yoshi .app-calendar {
+    background-color: #fff;
+    color: #000;
+}
+
+.app-theme-yoshi .app-bar-calendar {
+    background-color: #fae2cf;
+    color: #000;
+}
+
+.app-theme-yoshi .app-calendar-plugin span.app-current-day,
+.app-theme-yoshi .app-calendar-monthview .app-current-day,
+.app-theme-yoshi .app-calendar-yearview .app-current-day,
+.app-theme-yoshi .app-week-header .app-current-day,
+.app-theme-yoshi .app-day-header .visible-day.app-current-day,
+.app-theme-yoshi .app-has-current-day .current-time-line .dot {
+    background-color: #6f936f;
+}
+
+.app-theme-yoshi .app-has-current-day .current-time-line {
+    border-color: #6f936f;
+}
+
+.app-theme-yoshi .app-calendar-plugin,
+.app-theme-yoshi .app-calendar-plugin .app-calendar-color-legend {
+    border-color: #db7018;
+}
+
+.app-theme-yoshi .app-day-header :not(.ui-btn-active).ui-btn .app-current-day,
+.app-theme-yoshi .app-has-current-day .app-current-time,
+.app-theme-yoshi .app-calendar-agenda-list > li.app-has-current-day h2:not(.ui-btn-active) > span,
+.app-theme-yoshi .app-calendar-agenda-list li.app-time-line-container > .app-event-time {
+    color: #6f936f;
+}
+
+.app-theme-yoshi .app-calendar-plugin table tr.ui-btn-active td,
+.app-theme-yoshi .app-calendar-plugin table td.ui-btn-active,
+.app-theme-yoshi .app-calendar-yearview .app-calendar-month td.ui-btn-active {
+    background-color: #6f936f !important;
+}
+
+.app-theme-yoshi .app-calendar-month-header,
+.app-theme-yoshi .app-calendar-month-header h1 {
+    color: #002570 !important;
+}

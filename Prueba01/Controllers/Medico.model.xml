@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="Medico" alias="Medico" created="2016-06-11T20:24:55" modified="2016-06-11T20:24:57" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys />
+  <columns>
+    <column fieldName="IDMedico" name="Id_Medico" label="Id Medico" />
+    <column fieldName="Nombre" name="Nombre" label="Nombre" />
+    <column fieldName="ApP" name="Ap_P" label="Ap P" />
+    <column fieldName="ApM" name="AP_M" label="Ap M" />
+    <column fieldName="Especialidad" name="Especialidad" label="Especialidad" />
+    <column fieldName="Email" name="Email" label="Email" />
+    <column fieldName="Celular" name="Celular" label="Celular" />
+    <column fieldName="Fijo" name="Fijo" label="Fijo" />
+    <column fieldName="PorcentajeComision" name="porcentajeComision" label="porcentaje Comision" />
+    <column fieldName="Estado" name="Estado" label="Estado" />
+    <column fieldName="LogIn" name="Log_In" label="Log In" />
+  </columns>
+</dataModel>

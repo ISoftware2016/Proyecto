@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="Solicitud_Analisis" alias="Solicitud_Analisis" created="2016-06-11T20:25:03" modified="2016-06-11T20:25:05" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys>
+    <foreignKey id="idBioquimico" parentTableSchema="dbo" parentTableName="Persona" x="330" y="20">
+      <foreignKeyColumn columnName="idBioquimico" parentColumnName="Ci" />
+    </foreignKey>
+    <foreignKey id="idMedico" parentTableSchema="dbo" parentTableName="Medico" x="330" y="181">
+      <foreignKeyColumn columnName="idMedico" parentColumnName="Id_Medico" />
+    </foreignKey>
+    <foreignKey id="idPaciente" parentTableSchema="dbo" parentTableName="Persona" x="330" y="342">
+      <foreignKeyColumn columnName="idPaciente" parentColumnName="Ci" />
+    </foreignKey>
+  </foreignKeys>
+  <columns>
+    <column fieldName="IDSolicitudAnalisis" name="idSolicitudAnalisis" label="id Solicitud Analisis" />
+    <column fieldName="IDBioquimico" name="idBioquimico" label="id Bioquimico" aliasColumnName="Pass" aliasForeignKey="idBioquimico" />
+    <column fieldName="IDBioquimicoPass" name="Pass" label="id Bioquimico Pass" foreignKey="idBioquimico" />
+    <column fieldName="IDMedico" name="idMedico" label="id Medico" aliasColumnName="Nombre" aliasForeignKey="idMedico" />
+    <column fieldName="IDMedicoNombre" name="Nombre" label="id Medico Nombre" foreignKey="idMedico" />
+    <column fieldName="IDPaciente" name="idPaciente" label="id Paciente" aliasColumnName="Pass" aliasForeignKey="idPaciente" />
+    <column fieldName="IDPacientePass" name="Pass" label="id Paciente Pass" foreignKey="idPaciente" />
+    <column fieldName="IDSeguro" name="idSeguro" label="id Seguro" />
+    <column fieldName="Fecha" name="Fecha" label="Fecha" />
+    <column fieldName="DatosClinicos" name="DatosClinicos" label="Datos Clinicos" />
+    <column fieldName="Estado" name="Estado" label="Estado" />
+    <column fieldName="Completo" name="Completo" label="Completo" />
+    <column fieldName="IDEmpleado" name="idEmpleado" label="id Empleado" />
+  </columns>
+</dataModel>

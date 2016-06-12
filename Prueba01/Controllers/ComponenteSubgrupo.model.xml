@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="componente_subGrupo" alias="componente_subGrupo" created="2016-06-11T20:24:44" modified="2016-06-11T20:24:46" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys>
+    <foreignKey id="TheidSubGrupo" parentTableSchema="dbo" parentTableName="subGrupo" x="280" y="20">
+      <foreignKeyColumn columnName="idSubGrupo" parentColumnName="idSubGrupo" />
+    </foreignKey>
+    <foreignKey id="TheidComponente" parentTableSchema="dbo" parentTableName="componente" x="280" y="183">
+      <foreignKeyColumn columnName="idComponente" parentColumnName="idComponente" />
+    </foreignKey>
+  </foreignKeys>
+  <columns>
+    <column fieldName="IDSubGrupo" name="idSubGrupo" label="id Sub Grupo" aliasColumnName="nombre" aliasForeignKey="TheidSubGrupo" />
+    <column fieldName="TheidSubGruponombre" name="nombre" label="Theid Sub Gruponombre" foreignKey="TheidSubGrupo" />
+    <column fieldName="IDComponente" name="idComponente" label="id Componente" aliasColumnName="nombre" aliasForeignKey="TheidComponente" />
+    <column fieldName="TheidComponentenombre" name="nombre" label="Theid Componentenombre" foreignKey="TheidComponente" />
+  </columns>
+</dataModel>

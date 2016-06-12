@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="componente" alias="componente" created="2016-06-11T20:24:35" modified="2016-06-11T20:24:37" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys />
+  <columns>
+    <column fieldName="IDComponente" name="idComponente" label="id Componente" />
+    <column fieldName="Nombre" name="nombre" label="Nombre" />
+    <column fieldName="Unidad" name="unidad" label="Unidad" />
+    <column fieldName="ValorReferencial" name="valorReferencial" label="valor Referencial" />
+  </columns>
+</dataModel>

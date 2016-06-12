@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0">
+  <siteMapNode title="^SiteHome^Home^SiteHome^" description="" url="~/Default.aspx">
+    <siteMapNode title="^HomePath^Home^HomePath^" description="^HomeDesc^Application home page^HomeDesc^" url="~/Pages/Home.aspx" cssClass="Wide" />
+    <siteMapNode title="Analisis Lab" description="View Analisis Lab" url="~/Pages/AnalisisLab.aspx" />
+    <siteMapNode title="Componente" description="View Componente" url="~/Pages/Componente.aspx" />
+    <siteMapNode title="Componente Analisislab" description="View Componente Analisislab" url="~/Pages/ComponenteAnalisislab.aspx" />
+    <siteMapNode title="Componente Subgrupo" description="View Componente Subgrupo" url="~/Pages/ComponenteSubgrupo.aspx" />
+    <siteMapNode title="Sub Grupo" description="View Sub Grupo" url="~/Pages/SubGrupo.aspx" />
+    <siteMapNode title="Detalle Analisis" description="View Detalle Analisis" url="~/Pages/DetalleAnalisis.aspx" />
+    <siteMapNode title="Medico" description="View Medico" url="~/Pages/Medico.aspx" />
+    <siteMapNode title="Persona" description="View Persona" url="~/Pages/Persona.aspx" />
+    <siteMapNode title="Solicitud Analisis" description="View Solicitud Analisis" url="~/Pages/SolicitudAnalisis.aspx" />
+    <siteMapNode title="Resultado" description="View Resultado" url="~/Pages/Resultado.aspx" />
+    <siteMapNode title="^MembershipPath^Membership^MembershipPath^" description="^MembershipDesc^User and role manager^MembershipDesc^" url="~/Pages/Membership.aspx" roles="Administrators" />
+  </siteMapNode>
+</siteMap>
